@@ -1,0 +1,226 @@
+.timeline-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.timeline-header-controls {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.timeline-filter-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-track-wrap {
+  position: relative;
+  padding: 4rem 0;
+}
+
+.timeline-header-controls {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-vertical-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--border-strong) 10%, var(--border-strong) 90%, transparent);
+}
+
+.timeline-event-wrapper {
+  margin-bottom: 6rem;
+}
+
+.timeline-era-header {
+  position: sticky;
+  top: 80px; /* Below nav bar */
+  z-index: 10;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.era-badge {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  padding: 0.6rem 2rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* Base Desktop Layout (Alternating) */
+.timeline-item.left {
+  flex-direction: row-reverse;
+  padding-right: 50%;
+}
+
+.timeline-item.right {
+  flex-direction: row;
+  padding-left: 50%;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.5rem;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--accent-color, #3b82f6);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--bg-body), 0 0 15px var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content {
+  flex: 1;
+  max-width: 380px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline-item.left .timeline-content {
+  margin-right: 3rem;
+  text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 3rem;
+}
+
+.timeline-item.left .timeline-read-btn {
+  flex-direction: row-reverse;
+}
+
+.timeline-content:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-glow);
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-color, #3b82f6);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.timeline-read-btn {
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-vertical-line {
+    left: 20px;
+    transform: none;
+  }
+  .timeline-item.left, .timeline-item.right {
+    flex-direction: row;
+    padding-left: 45px;
+    padding-right: 0;
+  }
+  .timeline-marker {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+  .timeline-item.left .timeline-content, .timeline-item.right .timeline-content {
+    margin-left: 0.5rem;
+    margin-right: 0;
+    text-align: left;
+    max-width: 100%;
+  }
+  .timeline-era-header {
+    justify-content: flex-start;
+    padding-left: 45px;
+  }
+  .timeline-item.left .timeline-read-btn {
+    flex-direction: row;
+  }
+}
+
+.timeline-page-title {
+  margin: 0;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .timeline-page-title {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
