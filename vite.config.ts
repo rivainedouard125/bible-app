@@ -45,5 +45,18 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api\/ai/, '/api')
       }
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase warning limit to 1000kB
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor code into separate chunks
+          vendor: ['react', 'react-dom', 'react-intl'],
+          framer: ['framer-motion'],
+          supabase: ['@supabase/supabase-js']
+        }
+      }
+    }
   }
 })
