@@ -9,6 +9,35 @@ interface GlossaryProps {
   onClose: () => void;
 }
 
+const TAG_COLORS: Record<string, string> = {
+  // English
+  Apostle: '#6366f1',   // Indigo
+  King: '#f59e0b',      // Amber
+  Prophet: '#ec4899',   // Pink
+  Judge: '#f97316',     // Orange
+  Patriarch: '#8b5cf6', // Violet
+  Matriarch: '#d946ef', // Fuchsia
+  Leader: '#10b981',    // Emerald
+  Disciple: '#06b6d4',  // Cyan
+  Teacher: '#3b82f6',   // Blue
+  Author: '#f43f5e',    // Rose
+  Other: '#64748b',     // Slate
+
+  // French (translations that differ from English)
+  'Apôtre': '#6366f1',
+  'Roi': '#f59e0b',
+  'Reine': '#f59e0b',
+  'Prophète': '#ec4899',
+  'Prophétesse': '#ec4899',
+  'Juge': '#f97316',
+  'Patriarche': '#8b5cf6',
+  'Matriarche': '#d946ef',
+  'Enseignant': '#3b82f6',
+  'Auteur': '#f43f5e',
+};
+
+const getTagColor = (tag: string) => TAG_COLORS[tag] || '#64748b';
+
 export const Glossary: React.FC<GlossaryProps> = ({ onClose }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<string>('ALL_TAG');
@@ -70,15 +99,36 @@ export const Glossary: React.FC<GlossaryProps> = ({ onClose }) => {
         </div>
 
         <div className="glossary-filters">
-          {availableTags.map(tag => (
-            <button
-              key={tag}
-              className={`glossary-filter-chip ${activeFilter === tag ? 'active' : ''}`}
-              onClick={() => setActiveFilter(tag)}
-            >
-              {tag === 'ALL_TAG' ? t('glossaryAll' as any) : tag}
-            </button>
-          ))}
+          {availableTags.map(tag => {
+            const isAll = tag === 'ALL_TAG';
+            const isActive = activeFilter === tag;
+            const tagColor = isAll ? 'var(--text-primary)' : getTagColor(tag);
+            
+            return (
+              <button
+                key={tag}
+                className={`glossary-filter-chip ${isActive ? 'active' : ''}`}
+                onClick={() => setActiveFilter(tag)}
+                style={{
+                  borderColor: isAll 
+                    ? (isActive ? 'var(--text-primary)' : 'var(--border-subtle)') 
+                    : `${tagColor}${isActive ? 'aa' : '30'}`,
+                  background: isActive 
+                    ? (isAll ? 'var(--text-primary)10' : `${tagColor}20`) 
+                    : (isAll ? 'var(--glass-bg)' : `${tagColor}05`),
+                  color: isAll 
+                    ? (isActive ? 'var(--text-primary)' : 'var(--text-secondary)') 
+                    : tagColor,
+                  opacity: isActive ? 1 : 0.8,
+                  fontWeight: isActive ? '700' : '500',
+                  boxShadow: isActive && !isAll ? `0 4px 12px ${tagColor}25` : 'none',
+                  transform: isActive ? 'scale(1.05)' : 'scale(1)'
+                }}
+              >
+                {isAll ? t('glossaryAll' as any) : tag}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -96,13 +146,37 @@ export const Glossary: React.FC<GlossaryProps> = ({ onClose }) => {
                   <h3 className="char-card-title">{char.name}</h3>
                   <div className="char-card-era">{char.era}</div>
                 </div>
-                {char.roles[0] && <div className="char-badge">{char.roles[0]}</div>}
+                {char.roles[0] && (
+                  <div 
+                    className="char-badge"
+                    style={TAG_COLORS[char.roles[0]] ? {
+                      color: getTagColor(char.roles[0]),
+                      background: `${getTagColor(char.roles[0])}15`,
+                      borderColor: `${getTagColor(char.roles[0])}30`
+                    } : {}}
+                  >
+                    {char.roles[0]}
+                  </div>
+                )}
               </div>
               <p className="char-card-summary">{char.shortSummary}</p>
               <div className="char-card-footer">
-                {char.tags.map(t => (
-                  <span key={t} className="char-tag">{t}</span>
-                ))}
+                {char.tags.map(t => {
+                  const color = getTagColor(t);
+                  return (
+                    <span 
+                      key={t} 
+                      className="char-tag"
+                      style={{ 
+                        color: color,
+                        borderColor: `${color}40`,
+                        background: `${color}10`
+                      }}
+                    >
+                      {t}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -132,9 +206,18 @@ export const Glossary: React.FC<GlossaryProps> = ({ onClose }) => {
               <div className="char-detail-header-info">
                 <h2 className="char-detail-title">{selectedCharacter.name}</h2>
                 <div className="char-detail-roles">
-                  {selectedCharacter.roles.map(role => (
-                    <span key={role} className="char-detail-role">{role}</span>
-                  ))}
+                  {selectedCharacter.roles.map(role => {
+                    const color = TAG_COLORS[role];
+                    return (
+                      <span 
+                        key={role} 
+                        className="char-detail-role"
+                        style={color ? { color: color } : {}}
+                      >
+                        {role}
+                      </span>
+                    );
+                  })}
                 </div>
 
                 <div className="char-detail-meta">

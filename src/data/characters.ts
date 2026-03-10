@@ -136,6 +136,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "john_apostle",
     name: "John the Apostle",
+    imageUrl: "/images/characters/john_apostle.png",
     roles: ["Apostle", "Author"],
     era: "1st Century AD",
     keyLocations: ["Galilee", "Jerusalem", "Ephesus", "Patmos"],
@@ -305,6 +306,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "isaiah",
     name: "Isaiah",
+    imageUrl: "/images/characters/isaiah.png",
     roles: ["Prophet"],
     era: "8th Century BC",
     keyLocations: ["Jerusalem", "Judah"],
@@ -321,6 +323,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "jacob",
     name: "Jacob (Israel)",
+    imageUrl: "/images/characters/jacob.png",
     roles: ["Patriarch"],
     era: "19th-18th Century BC",
     keyLocations: ["Canaan", "Haran", "Egypt"],
@@ -337,6 +340,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "joshua",
     name: "Joshua",
+    imageUrl: "/images/characters/joshua.png",
     roles: ["Leader", "Military Commander"],
     era: "13th Century BC",
     keyLocations: ["Egypt", "Wilderness", "Jericho", "Canaan"],
@@ -353,6 +357,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "stephen",
     name: "Stephen",
+    imageUrl: "/images/characters/stephen.png",
     roles: ["Deacon", "Martyr"],
     era: "1st Century AD",
     keyLocations: ["Jerusalem"],
@@ -368,6 +373,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "gideon",
     name: "Gideon",
+    imageUrl: "/images/characters/gideon.png",
     roles: ["Judge", "Warrior"],
     era: "12th Century BC",
     keyLocations: ["Ophrah", "Jezreel Valley"],
@@ -383,6 +389,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "nehemiah",
     name: "Nehemiah",
+    imageUrl: "/images/characters/nehemiah.png",
     roles: ["Governor", "Builder"],
     era: "5th Century BC",
     keyLocations: ["Susa", "Jerusalem"],
@@ -399,6 +406,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "daniel",
     name: "Daniel",
+    imageUrl: "/images/characters/daniel.png",
     roles: ["Prophet", "Statesman"],
     era: "6th Century BC",
     keyLocations: ["Jerusalem", "Babylon"],
@@ -415,6 +423,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "mary_magdalene",
     name: "Mary Magdalene",
+    imageUrl: "/images/characters/mary_magdalene.png",
     roles: ["Disciple"],
     era: "1st Century AD",
     keyLocations: ["Galilee", "Jerusalem"],
@@ -431,6 +440,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "barnabas",
     name: "Barnabas",
+    imageUrl: "/images/characters/barnabas.png",
     roles: ["Missionary", "Teacher"],
     era: "1st Century AD",
     keyLocations: ["Cyprus", "Antioch", "Jerusalem"],
@@ -447,6 +457,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "samson",
     name: "Samson",
+    imageUrl: "/images/characters/samson.png",
     roles: ["Judge", "Warrior"],
     era: "12th Century BC",
     keyLocations: ["Zorah", "Timnah", "Gaza"],
@@ -463,6 +474,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "luke",
     name: "Luke",
+    imageUrl: "/images/characters/luke.png",
     roles: ["Physician", "Historian", "Author"],
     era: "1st Century AD",
     keyLocations: ["Antioch", "Rome", "Various (Traveling)"],

@@ -1,49 +1,1712 @@
 [
-  { "id": "en-ot-e-1", "scope": "Old Testament", "difficulty": "Easy", "question": "Who was the first man created by God?", "options": ["Abraham", "Adam", "Moses", "David"], "answer": "Adam", "explanation": "God created Adam from the dust of the ground.", "reference": "Genesis 2:7" },
-  { "id": "en-ot-e-2", "scope": "Old Testament", "difficulty": "Easy", "question": "Who built the ark to survive the great flood?", "options": ["Moses", "Abraham", "Noah", "Joseph"], "answer": "Noah", "explanation": "God commanded Noah to build an ark to save his family and the animals.", "reference": "Genesis 6:14" },
-  { "id": "en-ot-e-3", "scope": "Old Testament", "difficulty": "Easy", "question": "Who killed Goliath with a sling and a stone?", "options": ["Saul", "Jonathan", "Solomon", "David"], "answer": "David", "explanation": "David, a young shepherd, defeated the Philistine giant Goliath.", "reference": "1 Samuel 17:50" },
-  { "id": "en-ot-e-4", "scope": "Old Testament", "difficulty": "Easy", "question": "What did God use to lead the Israelites out of Egypt?", "options": ["A pillar of cloud and fire", "A golden chariot", "A flock of birds", "A majestic lion"], "answer": "A pillar of cloud and fire", "explanation": "The Lord went ahead of them in a pillar of cloud by day and a pillar of fire by night.", "reference": "Exodus 13:21" },
-  { "id": "en-ot-e-5", "scope": "Old Testament", "difficulty": "Easy", "question": "Who was swallowed by a great fish?", "options": ["Jonah", "Peter", "Moses", "Daniel"], "answer": "Jonah", "explanation": "Jonah was swallowed by a great fish when he tried to flee from God's command.", "reference": "Jonah 1:17" },
-  
-  { "id": "en-ot-m-1", "scope": "Old Testament", "difficulty": "Medium", "question": "What was the name of Abraham's first son?", "options": ["Isaac", "Ishmael", "Jacob", "Esau"], "answer": "Ishmael", "explanation": "Ishmael was Abraham's son by Hagar, Sarah's servant.", "reference": "Genesis 16:15" },
-  { "id": "en-ot-m-2", "scope": "Old Testament", "difficulty": "Medium", "question": "Which plague was the final one brought upon Egypt?", "options": ["Frogs", "Locusts", "Death of the firstborn", "Water turned to blood"], "answer": "Death of the firstborn", "explanation": "The tenth and final plague was the death of the firstborn in every Egyptian home.", "reference": "Exodus 11:5" },
-  { "id": "en-ot-m-3", "scope": "Old Testament", "difficulty": "Medium", "question": "Who was the first King of Israel?", "options": ["David", "Solomon", "Saul", "Samuel"], "answer": "Saul", "explanation": "Saul was anointed by Samuel as the first king of Israel.", "reference": "1 Samuel 10:1" },
-  { "id": "en-ot-m-4", "scope": "Old Testament", "difficulty": "Medium", "question": "Which prophet confronted the prophets of Baal on Mount Carmel?", "options": ["Elijah", "Elisha", "Isaiah", "Jeremiah"], "answer": "Elijah", "explanation": "Elijah challenged the prophets of Baal to prove whose God was real.", "reference": "1 Kings 18:20-40" },
-  { "id": "en-ot-m-5", "scope": "Old Testament", "difficulty": "Medium", "question": "Who interpreted Pharaoh's dreams about the famine?", "options": ["Daniel", "Moses", "Joseph", "Aaron"], "answer": "Joseph", "explanation": "Joseph interpreted Pharaoh's dream of seven fat cows and seven skinny cows.", "reference": "Genesis 41:25" },
-
-  { "id": "en-ot-h-1", "scope": "Old Testament", "difficulty": "Hard", "question": "Who was the oldest man mentioned in the Bible?", "options": ["Enoch", "Adam", "Methuselah", "Noah"], "answer": "Methuselah", "explanation": "Methuselah lived to be 969 years old.", "reference": "Genesis 5:27" },
-  { "id": "en-ot-h-2", "scope": "Old Testament", "difficulty": "Hard", "question": "Who was the father of King Ahab of Israel?", "options": ["Omri", "Jeroboam", "Jehu", "Baasha"], "answer": "Omri", "explanation": "Omri became king of Israel and his son Ahab succeeded him.", "reference": "1 Kings 16:28" },
-  { "id": "en-ot-h-3", "scope": "Old Testament", "difficulty": "Hard", "question": "Which prophet was a herdsman and a dresser of sycamore figs?", "options": ["Hosea", "Amos", "Micah", "Joel"], "answer": "Amos", "explanation": "Amos declared he was neither a prophet nor the son of a prophet, but a herdsman.", "reference": "Amos 7:14" },
-  { "id": "en-ot-h-4", "scope": "Old Testament", "difficulty": "Hard", "question": "What was the name of Moses' Ethiopian (Cushite) wife?", "options": ["Zipporah", "Miriam", "Achsah", "The Bible does not name her"], "answer": "The Bible does not name her", "explanation": "Moses married a Cushite woman, which angered Miriam and Aaron, but she is never named.", "reference": "Numbers 12:1" },
-  { "id": "en-ot-h-5", "scope": "Old Testament", "difficulty": "Hard", "question": "How many years did the Israelites eat manna in the wilderness?", "options": ["20", "40", "50", "7"], "answer": "40", "explanation": "The Israelites ate manna for 40 years until they reached the borders of Canaan.", "reference": "Exodus 16:35" },
-
-  { "id": "en-nt-e-1", "scope": "New Testament", "difficulty": "Easy", "question": "Where was Jesus born?", "options": ["Nazareth", "Jerusalem", "Bethlehem", "Galilee"], "answer": "Bethlehem", "explanation": "Jesus was born in Bethlehem of Judea.", "reference": "Matthew 2:1" },
-  { "id": "en-nt-e-2", "scope": "New Testament", "difficulty": "Easy", "question": "Who baptized Jesus?", "options": ["Peter", "John the Baptist", "James", "Matthew"], "answer": "John the Baptist", "explanation": "Jesus was baptized by John in the Jordan River.", "reference": "Matthew 3:13" },
-  { "id": "en-nt-e-3", "scope": "New Testament", "difficulty": "Easy", "question": "How many disciples did Jesus choose?", "options": ["10", "12", "7", "14"], "answer": "12", "explanation": "Jesus chose twelve disciples to follow Him.", "reference": "Luke 6:13" },
-  { "id": "en-nt-e-4", "scope": "New Testament", "difficulty": "Easy", "question": "Who betrayed Jesus?", "options": ["Peter", "Judas Iscariot", "Thomas", "Andrew"], "answer": "Judas Iscariot", "explanation": "Judas Iscariot betrayed Jesus for thirty pieces of silver.", "reference": "Matthew 26:14-16" },
-  { "id": "en-nt-e-5", "scope": "New Testament", "difficulty": "Easy", "question": "On what day did Jesus rise from the dead?", "options": ["The first day", "The third day", "The seventh day", "The tenth day"], "answer": "The third day", "explanation": "Jesus rose from the dead on the third day.", "reference": "Luke 24:7" },
-
-  { "id": "en-nt-m-1", "scope": "New Testament", "difficulty": "Medium", "question": "What was the profession of Matthew before he followed Jesus?", "options": ["Fisherman", "Tax Collector", "Carpenter", "Tentmaker"], "answer": "Tax Collector", "explanation": "Matthew was sitting at the tax collector's booth when Jesus called him.", "reference": "Matthew 9:9" },
-  { "id": "en-nt-m-2", "scope": "New Testament", "difficulty": "Medium", "question": "At what event did the Holy Spirit descend upon the apostles like tongues of fire?", "options": ["The Ascension", "The Transfiguration", "Pentecost", "The Last Supper"], "answer": "Pentecost", "explanation": "When the day of Pentecost came, they were all filled with the Holy Spirit.", "reference": "Acts 2:1-4" },
-  { "id": "en-nt-m-3", "scope": "New Testament", "difficulty": "Medium", "question": "Who wrote the majority of the Epistles (letters) in the New Testament?", "options": ["Peter", "John", "James", "Paul"], "answer": "Paul", "explanation": "The Apostle Paul wrote 13 of the epistles in the New Testament.", "reference": "Various Epistles" },
-  { "id": "en-nt-m-4", "scope": "New Testament", "difficulty": "Medium", "question": "In what city were the disciples first called 'Christians'?", "options": ["Jerusalem", "Rome", "Antioch", "Ephesus"], "answer": "Antioch", "explanation": "The disciples were called Christians first at Antioch.", "reference": "Acts 11:26" },
-  { "id": "en-nt-m-5", "scope": "New Testament", "difficulty": "Medium", "question": "Who was the High Priest who presided over the trial of Jesus?", "options": ["Annas", "Caiaphas", "Pilate", "Herod"], "answer": "Caiaphas", "explanation": "Those who had arrested Jesus took him to Caiaphas the high priest.", "reference": "Matthew 26:57" },
-
-  { "id": "en-nt-h-1", "scope": "New Testament", "difficulty": "Hard", "question": "To whom did Luke address both his Gospel and the Acts of the Apostles?", "options": ["Theophilus", "Cornelius", "Barnabas", "Silas"], "answer": "Theophilus", "explanation": "Luke addresses both the Gospel of Luke and the Book of Acts to Theophilus.", "reference": "Luke 1:3, Acts 1:1" },
-  { "id": "en-nt-h-2", "scope": "New Testament", "difficulty": "Hard", "question": "Who was the only female judge/prophetess mentioned as serving in the temple when Jesus was presented as a baby?", "options": ["Elizabeth", "Mary", "Anna", "Martha"], "answer": "Anna", "explanation": "Anna, a prophet, the daughter of Penuel, was there when Jesus was presented.", "reference": "Luke 2:36" },
-  { "id": "en-nt-h-3", "scope": "New Testament", "difficulty": "Hard", "question": "What island was Paul shipwrecked on during his journey to Rome?", "options": ["Cyprus", "Crete", "Malta", "Patmos"], "answer": "Malta", "explanation": "Once safely on shore, they found out that the island was called Malta.", "reference": "Acts 28:1" },
-  { "id": "en-nt-h-4", "scope": "New Testament", "difficulty": "Hard", "question": "In the Book of Revelation, which church was described as 'lukewarm'?", "options": ["Ephesus", "Smyrna", "Sardis", "Laodicea"], "answer": "Laodicea", "explanation": "The church in Laodicea was told by Jesus that because they were lukewarm, He would spit them out of His mouth.", "reference": "Revelation 3:16" },
-  { "id": "en-nt-h-5", "scope": "New Testament", "difficulty": "Hard", "question": "Who was chosen to replace Judas Iscariot as the twelfth apostle?", "options": ["Barnabas", "Matthias", "Paul", "Stephen"], "answer": "Matthias", "explanation": "They cast lots, and the lot fell to Matthias; so he was added to the eleven apostles.", "reference": "Acts 1:26" },
-
-  { "id": "en-gos-e-1", "scope": "The Gospels", "difficulty": "Easy", "question": "Which Gospel is an account of the genealogy, birth, and early life of Jesus designed to prove He was the Messiah to a Jewish audience?", "options": ["Mark", "Luke", "John", "Matthew"], "answer": "Matthew", "explanation": "Matthew's Gospel begins with the genealogy of Jesus, showing his descent from Abraham and David.", "reference": "Matthew 1" },
-  { "id": "en-gos-e-2", "scope": "The Gospels", "difficulty": "Easy", "question": "What was Jesus' first miracle?", "options": ["Feeding the 5000", "Walking on water", "Turning water into wine", "Healing a blind man"], "answer": "Turning water into wine", "explanation": "Jesus turned water into wine at the wedding in Cana of Galilee.", "reference": "John 2:1-11" },
-  { "id": "en-gos-e-3", "scope": "The Gospels", "difficulty": "Easy", "question": "Who were the first two disciples called by Jesus?", "options": ["James and John", "Peter and Andrew", "Philip and Bartholomew", "Matthew and Thomas"], "answer": "Peter and Andrew", "explanation": "As Jesus was walking beside the Sea of Galilee, he saw Simon (Peter) and his brother Andrew casting a net.", "reference": "Matthew 4:18" },
-
-  { "id": "en-gos-m-1", "scope": "The Gospels", "difficulty": "Medium", "question": "In the Parable of the Sower, what does the seed represent?", "options": ["The people", "The Word of God", "Money", "Good deeds"], "answer": "The Word of God", "explanation": "Jesus explained that the seed is the word of God.", "reference": "Luke 8:11" },
-  { "id": "en-gos-m-2", "scope": "The Gospels", "difficulty": "Medium", "question": "Who climbed a sycamore-fig tree to see Jesus in Jericho?", "options": ["Nicodemus", "Bartimaeus", "Zacchaeus", "Lazarus"], "answer": "Zacchaeus", "explanation": "Zacchaeus was a short man and climbed a tree to see Jesus passing by.", "reference": "Luke 19:4" },
-  { "id": "en-gos-m-3", "scope": "The Gospels", "difficulty": "Medium", "question": "Which Gospel is NOT considered one of the 'Synoptic Gospels'?", "options": ["Matthew", "Mark", "Luke", "John"], "answer": "John", "explanation": "Matthew, Mark, and Luke are the Synoptic Gospels because they include many of the same stories, often in a similar sequence.", "reference": "Biblical study" },
-
-  { "id": "en-gos-h-1", "scope": "The Gospels", "difficulty": "Hard", "question": "In John's Gospel, Jesus makes seven 'I am' statements. Which of these is NOT one of them?", "options": ["I am the bread of life", "I am the light of the world", "I am the great physician", "I am the good shepherd"], "answer": "I am the great physician", "explanation": "While Jesus is a healer, 'I am the great physician' is not one of the specific 'I am' statements in John.", "reference": "Book of John" },
-  { "id": "en-gos-h-2", "scope": "The Gospels", "difficulty": "Hard", "question": "To whom did Jesus say, 'Very truly I tell you, no one can see the kingdom of God unless they are born again'?", "options": ["Peter", "Nicodemus", "The Samaritan Woman", "Mary Magdalene"], "answer": "Nicodemus", "explanation": "Jesus spoke these words to Nicodemus, a Pharisee who came to Him at night.", "reference": "John 3:3" },
-  { "id": "en-gos-h-3", "scope": "The Gospels", "difficulty": "Hard", "question": "In the Sermon on the Mount, Jesus said 'Blessed are the meek...'. What is the promise given to them?", "options": ["They will see God", "They will inherit the earth", "They will be called children of God", "Theirs is the kingdom of heaven"], "answer": "They will inherit the earth", "explanation": "Blessed are the meek, for they will inherit the earth.", "reference": "Matthew 5:5" }
+  {
+    "id": "en-ot-e-1",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Who was the first man created by God?",
+    "options": [
+      "Abraham",
+      "Adam",
+      "Moses",
+      "David"
+    ],
+    "answer": "Adam",
+    "explanation": "God created Adam from the dust of the ground.",
+    "reference": "Genesis 2:7"
+  },
+  {
+    "id": "en-ot-e-2",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Who built the ark to survive the great flood?",
+    "options": [
+      "Moses",
+      "Abraham",
+      "Noah",
+      "Joseph"
+    ],
+    "answer": "Noah",
+    "explanation": "God commanded Noah to build an ark to save his family and the animals.",
+    "reference": "Genesis 6:14"
+  },
+  {
+    "id": "en-ot-e-3",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Who killed Goliath with a sling and a stone?",
+    "options": [
+      "Saul",
+      "Jonathan",
+      "Solomon",
+      "David"
+    ],
+    "answer": "David",
+    "explanation": "David, a young shepherd, defeated the Philistine giant Goliath.",
+    "reference": "1 Samuel 17:50"
+  },
+  {
+    "id": "en-ot-e-4",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "What did God use to lead the Israelites out of Egypt?",
+    "options": [
+      "A pillar of cloud and fire",
+      "A golden chariot",
+      "A flock of birds",
+      "A majestic lion"
+    ],
+    "answer": "A pillar of cloud and fire",
+    "explanation": "The Lord went ahead of them in a pillar of cloud by day and a pillar of fire by night.",
+    "reference": "Exodus 13:21"
+  },
+  {
+    "id": "en-ot-e-5",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Who was swallowed by a great fish?",
+    "options": [
+      "Jonah",
+      "Peter",
+      "Moses",
+      "Daniel"
+    ],
+    "answer": "Jonah",
+    "explanation": "Jonah was swallowed by a great fish when he tried to flee from God's command.",
+    "reference": "Jonah 1:17"
+  },
+  {
+    "id": "en-ot-m-1",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "What was the name of Abraham's first son?",
+    "options": [
+      "Isaac",
+      "Ishmael",
+      "Jacob",
+      "Esau"
+    ],
+    "answer": "Ishmael",
+    "explanation": "Ishmael was Abraham's son by Hagar, Sarah's servant.",
+    "reference": "Genesis 16:15"
+  },
+  {
+    "id": "en-ot-m-2",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Which plague was the final one brought upon Egypt?",
+    "options": [
+      "Frogs",
+      "Locusts",
+      "Death of the firstborn",
+      "Water turned to blood"
+    ],
+    "answer": "Death of the firstborn",
+    "explanation": "The tenth and final plague was the death of the firstborn in every Egyptian home.",
+    "reference": "Exodus 11:5"
+  },
+  {
+    "id": "en-ot-m-3",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Who was the first King of Israel?",
+    "options": [
+      "David",
+      "Solomon",
+      "Saul",
+      "Samuel"
+    ],
+    "answer": "Saul",
+    "explanation": "Saul was anointed by Samuel as the first king of Israel.",
+    "reference": "1 Samuel 10:1"
+  },
+  {
+    "id": "en-ot-m-4",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Which prophet confronted the prophets of Baal on Mount Carmel?",
+    "options": [
+      "Elijah",
+      "Elisha",
+      "Isaiah",
+      "Jeremiah"
+    ],
+    "answer": "Elijah",
+    "explanation": "Elijah challenged the prophets of Baal to prove whose God was real.",
+    "reference": "1 Kings 18:20-40"
+  },
+  {
+    "id": "en-ot-m-5",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Who interpreted Pharaoh's dreams about the famine?",
+    "options": [
+      "Daniel",
+      "Moses",
+      "Joseph",
+      "Aaron"
+    ],
+    "answer": "Joseph",
+    "explanation": "Joseph interpreted Pharaoh's dream of seven fat cows and seven skinny cows.",
+    "reference": "Genesis 41:25"
+  },
+  {
+    "id": "en-ot-h-1",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Who was the oldest man mentioned in the Bible?",
+    "options": [
+      "Enoch",
+      "Adam",
+      "Methuselah",
+      "Noah"
+    ],
+    "answer": "Methuselah",
+    "explanation": "Methuselah lived to be 969 years old.",
+    "reference": "Genesis 5:27"
+  },
+  {
+    "id": "en-ot-h-2",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Who was the father of King Ahab of Israel?",
+    "options": [
+      "Omri",
+      "Jeroboam",
+      "Jehu",
+      "Baasha"
+    ],
+    "answer": "Omri",
+    "explanation": "Omri became king of Israel and his son Ahab succeeded him.",
+    "reference": "1 Kings 16:28"
+  },
+  {
+    "id": "en-ot-h-3",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Which prophet was a herdsman and a dresser of sycamore figs?",
+    "options": [
+      "Hosea",
+      "Amos",
+      "Micah",
+      "Joel"
+    ],
+    "answer": "Amos",
+    "explanation": "Amos declared he was neither a prophet nor the son of a prophet, but a herdsman.",
+    "reference": "Amos 7:14"
+  },
+  {
+    "id": "en-ot-h-4",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "What was the name of Moses' Ethiopian (Cushite) wife?",
+    "options": [
+      "Zipporah",
+      "Miriam",
+      "Achsah",
+      "The Bible does not name her"
+    ],
+    "answer": "The Bible does not name her",
+    "explanation": "Moses married a Cushite woman, which angered Miriam and Aaron, but she is never named.",
+    "reference": "Numbers 12:1"
+  },
+  {
+    "id": "en-ot-h-5",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "How many years did the Israelites eat manna in the wilderness?",
+    "options": [
+      "20",
+      "40",
+      "50",
+      "7"
+    ],
+    "answer": "40",
+    "explanation": "The Israelites ate manna for 40 years until they reached the borders of Canaan.",
+    "reference": "Exodus 16:35"
+  },
+  {
+    "id": "en-nt-e-1",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Where was Jesus born?",
+    "options": [
+      "Nazareth",
+      "Jerusalem",
+      "Bethlehem",
+      "Galilee"
+    ],
+    "answer": "Bethlehem",
+    "explanation": "Jesus was born in Bethlehem of Judea.",
+    "reference": "Matthew 2:1"
+  },
+  {
+    "id": "en-nt-e-2",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Who baptized Jesus?",
+    "options": [
+      "Peter",
+      "John the Baptist",
+      "James",
+      "Matthew"
+    ],
+    "answer": "John the Baptist",
+    "explanation": "Jesus was baptized by John in the Jordan River.",
+    "reference": "Matthew 3:13"
+  },
+  {
+    "id": "en-nt-e-3",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "How many disciples did Jesus choose?",
+    "options": [
+      "10",
+      "12",
+      "7",
+      "14"
+    ],
+    "answer": "12",
+    "explanation": "Jesus chose twelve disciples to follow Him.",
+    "reference": "Luke 6:13"
+  },
+  {
+    "id": "en-nt-e-4",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Who betrayed Jesus?",
+    "options": [
+      "Peter",
+      "Judas Iscariot",
+      "Thomas",
+      "Andrew"
+    ],
+    "answer": "Judas Iscariot",
+    "explanation": "Judas Iscariot betrayed Jesus for thirty pieces of silver.",
+    "reference": "Matthew 26:14-16"
+  },
+  {
+    "id": "en-nt-e-5",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "On what day did Jesus rise from the dead?",
+    "options": [
+      "The first day",
+      "The third day",
+      "The seventh day",
+      "The tenth day"
+    ],
+    "answer": "The third day",
+    "explanation": "Jesus rose from the dead on the third day.",
+    "reference": "Luke 24:7"
+  },
+  {
+    "id": "en-nt-m-1",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "What was the profession of Matthew before he followed Jesus?",
+    "options": [
+      "Fisherman",
+      "Tax Collector",
+      "Carpenter",
+      "Tentmaker"
+    ],
+    "answer": "Tax Collector",
+    "explanation": "Matthew was sitting at the tax collector's booth when Jesus called him.",
+    "reference": "Matthew 9:9"
+  },
+  {
+    "id": "en-nt-m-2",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "At what event did the Holy Spirit descend upon the apostles like tongues of fire?",
+    "options": [
+      "The Ascension",
+      "The Transfiguration",
+      "Pentecost",
+      "The Last Supper"
+    ],
+    "answer": "Pentecost",
+    "explanation": "When the day of Pentecost came, they were all filled with the Holy Spirit.",
+    "reference": "Acts 2:1-4"
+  },
+  {
+    "id": "en-nt-m-3",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who wrote the majority of the Epistles (letters) in the New Testament?",
+    "options": [
+      "Peter",
+      "John",
+      "James",
+      "Paul"
+    ],
+    "answer": "Paul",
+    "explanation": "The Apostle Paul wrote 13 of the epistles in the New Testament.",
+    "reference": "Various Epistles"
+  },
+  {
+    "id": "en-nt-m-4",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "In what city were the disciples first called 'Christians'?",
+    "options": [
+      "Jerusalem",
+      "Rome",
+      "Antioch",
+      "Ephesus"
+    ],
+    "answer": "Antioch",
+    "explanation": "The disciples were called Christians first at Antioch.",
+    "reference": "Acts 11:26"
+  },
+  {
+    "id": "en-nt-m-5",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who was the High Priest who presided over the trial of Jesus?",
+    "options": [
+      "Annas",
+      "Caiaphas",
+      "Pilate",
+      "Herod"
+    ],
+    "answer": "Caiaphas",
+    "explanation": "Those who had arrested Jesus took him to Caiaphas the high priest.",
+    "reference": "Matthew 26:57"
+  },
+  {
+    "id": "en-nt-h-1",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "To whom did Luke address both his Gospel and the Acts of the Apostles?",
+    "options": [
+      "Theophilus",
+      "Cornelius",
+      "Barnabas",
+      "Silas"
+    ],
+    "answer": "Theophilus",
+    "explanation": "Luke addresses both the Gospel of Luke and the Book of Acts to Theophilus.",
+    "reference": "Luke 1:3, Acts 1:1"
+  },
+  {
+    "id": "en-nt-h-2",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "Who was the only female judge/prophetess mentioned as serving in the temple when Jesus was presented as a baby?",
+    "options": [
+      "Elizabeth",
+      "Mary",
+      "Anna",
+      "Martha"
+    ],
+    "answer": "Anna",
+    "explanation": "Anna, a prophet, the daughter of Penuel, was there when Jesus was presented.",
+    "reference": "Luke 2:36"
+  },
+  {
+    "id": "en-nt-h-3",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "What island was Paul shipwrecked on during his journey to Rome?",
+    "options": [
+      "Cyprus",
+      "Crete",
+      "Malta",
+      "Patmos"
+    ],
+    "answer": "Malta",
+    "explanation": "Once safely on shore, they found out that the island was called Malta.",
+    "reference": "Acts 28:1"
+  },
+  {
+    "id": "en-nt-h-4",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "In the Book of Revelation, which church was described as 'lukewarm'?",
+    "options": [
+      "Ephesus",
+      "Smyrna",
+      "Sardis",
+      "Laodicea"
+    ],
+    "answer": "Laodicea",
+    "explanation": "The church in Laodicea was told by Jesus that because they were lukewarm, He would spit them out of His mouth.",
+    "reference": "Revelation 3:16"
+  },
+  {
+    "id": "en-nt-h-5",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "Who was chosen to replace Judas Iscariot as the twelfth apostle?",
+    "options": [
+      "Barnabas",
+      "Matthias",
+      "Paul",
+      "Stephen"
+    ],
+    "answer": "Matthias",
+    "explanation": "They cast lots, and the lot fell to Matthias; so he was added to the eleven apostles.",
+    "reference": "Acts 1:26"
+  },
+  {
+    "id": "en-gos-e-1",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Which Gospel is an account of the genealogy, birth, and early life of Jesus designed to prove He was the Messiah to a Jewish audience?",
+    "options": [
+      "Mark",
+      "Luke",
+      "John",
+      "Matthew"
+    ],
+    "answer": "Matthew",
+    "explanation": "Matthew's Gospel begins with the genealogy of Jesus, showing his descent from Abraham and David.",
+    "reference": "Matthew 1"
+  },
+  {
+    "id": "en-gos-e-2",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "What was Jesus' first miracle?",
+    "options": [
+      "Feeding the 5000",
+      "Walking on water",
+      "Turning water into wine",
+      "Healing a blind man"
+    ],
+    "answer": "Turning water into wine",
+    "explanation": "Jesus turned water into wine at the wedding in Cana of Galilee.",
+    "reference": "John 2:1-11"
+  },
+  {
+    "id": "en-gos-e-3",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Who were the first two disciples called by Jesus?",
+    "options": [
+      "James and John",
+      "Peter and Andrew",
+      "Philip and Bartholomew",
+      "Matthew and Thomas"
+    ],
+    "answer": "Peter and Andrew",
+    "explanation": "As Jesus was walking beside the Sea of Galilee, he saw Simon (Peter) and his brother Andrew casting a net.",
+    "reference": "Matthew 4:18"
+  },
+  {
+    "id": "en-gos-m-1",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "In the Parable of the Sower, what does the seed represent?",
+    "options": [
+      "The people",
+      "The Word of God",
+      "Money",
+      "Good deeds"
+    ],
+    "answer": "The Word of God",
+    "explanation": "Jesus explained that the seed is the word of God.",
+    "reference": "Luke 8:11"
+  },
+  {
+    "id": "en-gos-m-2",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "Who climbed a sycamore-fig tree to see Jesus in Jericho?",
+    "options": [
+      "Nicodemus",
+      "Bartimaeus",
+      "Zacchaeus",
+      "Lazarus"
+    ],
+    "answer": "Zacchaeus",
+    "explanation": "Zacchaeus was a short man and climbed a tree to see Jesus passing by.",
+    "reference": "Luke 19:4"
+  },
+  {
+    "id": "en-gos-m-3",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "Which Gospel is NOT considered one of the 'Synoptic Gospels'?",
+    "options": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ],
+    "answer": "John",
+    "explanation": "Matthew, Mark, and Luke are the Synoptic Gospels because they include many of the same stories, often in a similar sequence.",
+    "reference": "Biblical study"
+  },
+  {
+    "id": "en-gos-h-1",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "In John's Gospel, Jesus makes seven 'I am' statements. Which of these is NOT one of them?",
+    "options": [
+      "I am the bread of life",
+      "I am the light of the world",
+      "I am the great physician",
+      "I am the good shepherd"
+    ],
+    "answer": "I am the great physician",
+    "explanation": "While Jesus is a healer, 'I am the great physician' is not one of the specific 'I am' statements in John.",
+    "reference": "Book of John"
+  },
+  {
+    "id": "en-gos-h-2",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "To whom did Jesus say, 'Very truly I tell you, no one can see the kingdom of God unless they are born again'?",
+    "options": [
+      "Peter",
+      "Nicodemus",
+      "The Samaritan Woman",
+      "Mary Magdalene"
+    ],
+    "answer": "Nicodemus",
+    "explanation": "Jesus spoke these words to Nicodemus, a Pharisee who came to Him at night.",
+    "reference": "John 3:3"
+  },
+  {
+    "id": "en-gos-h-3",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "In the Sermon on the Mount, Jesus said 'Blessed are the meek...'. What is the promise given to them?",
+    "options": [
+      "They will see God",
+      "They will inherit the earth",
+      "They will be called children of God",
+      "Theirs is the kingdom of heaven"
+    ],
+    "answer": "They will inherit the earth",
+    "explanation": "Blessed are the meek, for they will inherit the earth.",
+    "reference": "Matthew 5:5"
+  },
+  {
+    "id": "en-ot-e-6",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "What animal spoke to the prophet Balaam?",
+    "options": [
+      "A sheep",
+      "A camel",
+      "A donkey",
+      "A lion"
+    ],
+    "answer": "A donkey",
+    "explanation": "God opened the donkey's mouth to speak to Balaam after he beat it.",
+    "reference": "Numbers 22:28"
+  },
+  {
+    "id": "en-ot-e-7",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "What special gift did Jacob give to his favorite son, Joseph?",
+    "options": [
+      "A golden ring",
+      "A coat of many colors",
+      "A sword",
+      "A flock of sheep"
+    ],
+    "answer": "A coat of many colors",
+    "explanation": "Jacob loved Joseph more than any of his other sons and made him an ornate robe.",
+    "reference": "Genesis 37:3"
+  },
+  {
+    "id": "en-ot-e-8",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Which baby was placed in a basket in the Nile River to save his life?",
+    "options": [
+      "Isaac",
+      "Moses",
+      "Aaron",
+      "David"
+    ],
+    "answer": "Moses",
+    "explanation": "Moses' mother hid him in a papyrus basket among the reeds of the Nile to save him from Pharaoh's order to kill Hebrew boys.",
+    "reference": "Exodus 2:3"
+  },
+  {
+    "id": "en-ot-e-9",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "What did God create on the first day?",
+    "options": [
+      "Animals",
+      "Humans",
+      "Light",
+      "The Sun and Moon"
+    ],
+    "answer": "Light",
+    "explanation": "God said, 'Let there be light,' and there was light.",
+    "reference": "Genesis 1:3"
+  },
+  {
+    "id": "en-ot-e-10",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "What weapon did Samson use to defeat 1,000 Philistines?",
+    "options": [
+      "A bronze sword",
+      "A jawbone of a donkey",
+      "A wooden club",
+      "A sling"
+    ],
+    "answer": "A jawbone of a donkey",
+    "explanation": "Samson found a fresh jawbone of a donkey and used it to strike down a thousand men.",
+    "reference": "Judges 15:15"
+  },
+  {
+    "id": "en-ot-m-6",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Who was the left-handed judge who defeated Eglon, the very fat king of Moab?",
+    "options": [
+      "Gideon",
+      "Samson",
+      "Ehud",
+      "Othniel"
+    ],
+    "answer": "Ehud",
+    "explanation": "Ehud, a left-handed man, brought tribute to King Eglon and assassinated him with a hidden sword.",
+    "reference": "Judges 3:15"
+  },
+  {
+    "id": "en-ot-m-7",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "What was the name of the woman who hid the Israelite spies in Jericho?",
+    "options": [
+      "Ruth",
+      "Rahab",
+      "Sarah",
+      "Esther"
+    ],
+    "answer": "Rahab",
+    "explanation": "Rahab the prostitute hid the spies on her roof and was spared when Jericho fell.",
+    "reference": "Joshua 2:1"
+  },
+  {
+    "id": "en-ot-m-8",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "How many days and nights did it rain during Noah's flood?",
+    "options": [
+      "7",
+      "12",
+      "40",
+      "150"
+    ],
+    "answer": "40",
+    "explanation": "Rain fell on the earth for forty days and forty nights.",
+    "reference": "Genesis 7:12"
+  },
+  {
+    "id": "en-ot-m-9",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Which queen traveled a great distance to test King Solomon's wisdom?",
+    "options": [
+      "Queen of Esther",
+      "Queen of Sheba",
+      "Queen of Egypt",
+      "Queen Jezebel"
+    ],
+    "answer": "Queen of Sheba",
+    "explanation": "The Queen of Sheba heard of Solomon's fame and came to test him with hard questions.",
+    "reference": "1 Kings 10:1"
+  },
+  {
+    "id": "en-ot-m-10",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "What food did God provide for Elijah when he was hiding by the brook Cherith?",
+    "options": [
+      "Manna",
+      "Bread and meat brought by ravens",
+      "Locusts and wild honey",
+      "Fish from the brook"
+    ],
+    "answer": "Bread and meat brought by ravens",
+    "explanation": "God commanded ravens to bring Elijah bread and meat in the morning and evening.",
+    "reference": "1 Kings 17:6"
+  },
+  {
+    "id": "en-ot-h-6",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "What was the name of Moses' sister?",
+    "options": [
+      "Zipporah",
+      "Miriam",
+      "Hannah",
+      "Leah"
+    ],
+    "answer": "Miriam",
+    "explanation": "Miriam was the sister of Moses and Aaron.",
+    "reference": "Numbers 26:59"
+  },
+  {
+    "id": "en-ot-h-7",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Who was the king of Babylon when Shadrach, Meshach, and Abednego were thrown into the fiery furnace?",
+    "options": [
+      "Belshazzar",
+      "Darius",
+      "Nebuchadnezzar",
+      "Cyrus"
+    ],
+    "answer": "Nebuchadnezzar",
+    "explanation": "King Nebuchadnezzar threw them into the furnace for refusing to worship his golden image.",
+    "reference": "Daniel 3:1"
+  },
+  {
+    "id": "en-ot-h-8",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Which son of David led a massive rebellion against him and tried to steal the throne?",
+    "options": [
+      "Solomon",
+      "Absalom",
+      "Adonijah",
+      "Amnon"
+    ],
+    "answer": "Absalom",
+    "explanation": "Absalom won the hearts of the people and declared himself king in Hebron.",
+    "reference": "2 Samuel 15"
+  },
+  {
+    "id": "en-ot-h-9",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "What was the name of the commander of the Syrian army who was healed of leprosy by Elisha?",
+    "options": [
+      "Goliath",
+      "Naaman",
+      "Sisera",
+      "Sennacherib"
+    ],
+    "answer": "Naaman",
+    "explanation": "Naaman was told by Elisha to wash in the Jordan seven times to be healed.",
+    "reference": "2 Kings 5"
+  },
+  {
+    "id": "en-ot-h-10",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "How many books are in the Old Testament (Protestant Bible)?",
+    "options": [
+      "27",
+      "39",
+      "46",
+      "66"
+    ],
+    "answer": "39",
+    "explanation": "There are 39 books in the Old Testament and 27 in the New Testament.",
+    "reference": "Biblical study"
+  },
+  {
+    "id": "en-gos-e-4",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Which of the following was NOT a gift brought to Jesus by the Magi?",
+    "options": [
+      "Gold",
+      "Frankincense",
+      "Silver",
+      "Myrrh"
+    ],
+    "answer": "Silver",
+    "explanation": "The Magi presented gifts of gold, frankincense, and myrrh.",
+    "reference": "Matthew 2:11"
+  },
+  {
+    "id": "en-gos-e-5",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Where was Jesus when he was tempted by Satan?",
+    "options": [
+      "The Temple",
+      "The Wilderness",
+      "A mountain",
+      "The Sea of Galilee"
+    ],
+    "answer": "The Wilderness",
+    "explanation": "Jesus was led by the Spirit into the wilderness, where he fasted for forty days.",
+    "reference": "Matthew 4:1"
+  },
+  {
+    "id": "en-gos-e-6",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "What river was Jesus baptized in?",
+    "options": [
+      "The Nile",
+      "The Tigris",
+      "The Jordan",
+      "The Euphrates"
+    ],
+    "answer": "The Jordan",
+    "explanation": "John baptized Jesus in the Jordan River.",
+    "reference": "Mark 1:9"
+  },
+  {
+    "id": "en-gos-e-7",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Which disciple famously walked on water towards Jesus but began to sink?",
+    "options": [
+      "John",
+      "James",
+      "Peter",
+      "Thomas"
+    ],
+    "answer": "Peter",
+    "explanation": "Peter walked on the water but began to sink when he saw the wind.",
+    "reference": "Matthew 14:29-30"
+  },
+  {
+    "id": "en-gos-m-4",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "In the parable, how many sheep did the shepherd leave behind to find the one that was lost?",
+    "options": [
+      "10",
+      "50",
+      "99",
+      "7"
+    ],
+    "answer": "99",
+    "explanation": "He leaves the ninety-nine on the hills and goes to look for the one that wandered off.",
+    "reference": "Matthew 18:12"
+  },
+  {
+    "id": "en-gos-m-5",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "What did Jesus say is the greatest commandment?",
+    "options": [
+      "Do not murder",
+      "Love the Lord your God",
+      "Love your neighbor as yourself",
+      "Keep the Sabbath holy"
+    ],
+    "answer": "Love the Lord your God",
+    "explanation": "Jesus said, 'Love the Lord your God with all your heart and with all your soul and with all your mind.'",
+    "reference": "Matthew 22:37"
+  },
+  {
+    "id": "en-gos-m-6",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "Who requested the head of John the Baptist on a platter?",
+    "options": [
+      "Herodias' daughter",
+      "Pontius Pilate",
+      "King Herod",
+      "The Pharisees"
+    ],
+    "answer": "Herodias' daughter",
+    "explanation": "Prompted by her mother Herodias, the daughter asked for John the Baptist's head.",
+    "reference": "Matthew 14:8"
+  },
+  {
+    "id": "en-gos-m-7",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "According to Jesus, who is the 'father of lies'?",
+    "options": [
+      "Cain",
+      "The devil",
+      "Judas",
+      "Pharaoh"
+    ],
+    "answer": "The devil",
+    "explanation": "Jesus said the devil is a liar and the father of lies.",
+    "reference": "John 8:44"
+  },
+  {
+    "id": "en-gos-h-4",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "What was the name of the blind beggar Jesus healed outside Jericho?",
+    "options": [
+      "Bartimaeus",
+      "Lazarus",
+      "Zacchaeus",
+      "Cleopas"
+    ],
+    "answer": "Bartimaeus",
+    "explanation": "A blind beggar named Bartimaeus was sitting by the roadside when Jesus passed by.",
+    "reference": "Mark 10:46"
+  },
+  {
+    "id": "en-gos-h-5",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "To whom did Jesus say, 'Get behind me, Satan!'?",
+    "options": [
+      "Judas",
+      "A demon",
+      "Peter",
+      "The Pharisees"
+    ],
+    "answer": "Peter",
+    "explanation": "Jesus rebuked Peter when Peter objected to Jesus predicting His own death.",
+    "reference": "Matthew 16:23"
+  },
+  {
+    "id": "en-gos-h-6",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "Who was the Roman governor that ordered the crucifixion of Jesus?",
+    "options": [
+      "Julius Caesar",
+      "Pontius Pilate",
+      "Herod Antipas",
+      "Felix"
+    ],
+    "answer": "Pontius Pilate",
+    "explanation": "Pilate handed Jesus over to be crucified to please the crowd.",
+    "reference": "Mark 15:15"
+  },
+  {
+    "id": "en-gos-h-7",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "What did the soldiers do to divide Jesus' clothes at the cross?",
+    "options": [
+      "They tore them into pieces",
+      "They auctioned them",
+      "They cast lots for them",
+      "They gave them away"
+    ],
+    "answer": "They cast lots for them",
+    "explanation": "They divided his clothes among them, casting lots to fulfill prophecy.",
+    "reference": "Matthew 27:35"
+  },
+  {
+    "id": "en-nt-e-6",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Who was blindingly confronted by Jesus on the road to Damascus?",
+    "options": [
+      "Peter",
+      "John",
+      "Saul (Paul)",
+      "Stephen"
+    ],
+    "answer": "Saul (Paul)",
+    "explanation": "Saul was traveling to Damascus to persecute Christians when Jesus appeared in a blinding light.",
+    "reference": "Acts 9:3"
+  },
+  {
+    "id": "en-nt-e-7",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Who became the first Christian martyr after being stoned to death?",
+    "options": [
+      "James",
+      "Peter",
+      "Stephen",
+      "Andrew"
+    ],
+    "answer": "Stephen",
+    "explanation": "Stephen was stoned by the Sanhedrin while Saul watched.",
+    "reference": "Acts 7:59"
+  },
+  {
+    "id": "en-nt-e-8",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "What is the last book of the New Testament?",
+    "options": [
+      "Jude",
+      "Acts",
+      "Hebrews",
+      "Revelation"
+    ],
+    "answer": "Revelation",
+    "explanation": "Revelation is the final book, describing visions of the end times.",
+    "reference": "Book of Revelation"
+  },
+  {
+    "id": "en-nt-m-6",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who was Paul's primary companion on his first missionary journey?",
+    "options": [
+      "Silas",
+      "Timothy",
+      "Barnabas",
+      "Luke"
+    ],
+    "answer": "Barnabas",
+    "explanation": "The Holy Spirit set apart Barnabas and Saul for the work of the first journey.",
+    "reference": "Acts 13:2"
+  },
+  {
+    "id": "en-nt-m-7",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "What was the profession of Aquila and Priscilla, friends of Paul?",
+    "options": [
+      "Fishermen",
+      "Tentmakers",
+      "Merchants",
+      "Silversmiths"
+    ],
+    "answer": "Tentmakers",
+    "explanation": "Paul stayed with them because they were tentmakers, just as he was.",
+    "reference": "Acts 18:3"
+  },
+  {
+    "id": "en-nt-m-8",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who famously fell out of a window and died while Paul was preaching, but was raised back to life by Paul?",
+    "options": [
+      "Eutychus",
+      "Timothy",
+      "Apollos",
+      "Gaius"
+    ],
+    "answer": "Eutychus",
+    "explanation": "Eutychus fell asleep while Paul was talking late into the night and fell from the third story.",
+    "reference": "Acts 20:9"
+  },
+  {
+    "id": "en-nt-h-6",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "Which Book in the New Testament is addressed to the 'twelve tribes scattered among the nations'?",
+    "options": [
+      "1 Peter",
+      "James",
+      "Hebrews",
+      "1 John"
+    ],
+    "answer": "James",
+    "explanation": "The letter of James opens with this greeting.",
+    "reference": "James 1:1"
+  },
+  {
+    "id": "en-nt-h-7",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "In which city was the 'unknown god' altar that Paul used to preach the gospel?",
+    "options": [
+      "Corinth",
+      "Ephesus",
+      "Athens",
+      "Rome"
+    ],
+    "answer": "Athens",
+    "explanation": "Paul saw an altar with the inscription 'TO AN UNKNOWN GOD' while in Athens.",
+    "reference": "Acts 17:23"
+  },
+  {
+    "id": "en-nt-h-8",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "Who was the silversmith in Ephesus that started a riot against Paul?",
+    "options": [
+      "Alexander",
+      "Demetrius",
+      "Hymenaeus",
+      "Erastus"
+    ],
+    "answer": "Demetrius",
+    "explanation": "Demetrius made silver shrines of Artemis and gathered the craftsmen to riot against Paul's teachings.",
+    "reference": "Acts 19:24"
+  },
+  {
+    "id": "en-ot-e-11",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Who was Abraham's wife?",
+    "options": [
+      "Rachel",
+      "Leah",
+      "Sarah",
+      "Rebekah"
+    ],
+    "answer": "Sarah",
+    "explanation": "Sarah was the wife of Abraham and mother of Isaac.",
+    "reference": "Genesis 17:15"
+  },
+  {
+    "id": "en-ot-e-12",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "What city's walls fell down after the Israelites marched around them for seven days?",
+    "options": [
+      "Jerusalem",
+      "Babylon",
+      "Jericho",
+      "Sodom"
+    ],
+    "answer": "Jericho",
+    "explanation": "The walls of Jericho collapsed heavily after the trumpets sounded on the seventh day.",
+    "reference": "Joshua 6:20"
+  },
+  {
+    "id": "en-ot-e-13",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "How many plagues did God send upon Egypt?",
+    "options": [
+      "7",
+      "10",
+      "12",
+      "40"
+    ],
+    "answer": "10",
+    "explanation": "God struck Egypt with ten devastating plagues before Pharaoh let the Israelites go.",
+    "reference": "Exodus 7-12"
+  },
+  {
+    "id": "en-ot-m-11",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Who was the father of King David?",
+    "options": [
+      "Saul",
+      "Jesse",
+      "Boaz",
+      "Samuel"
+    ],
+    "answer": "Jesse",
+    "explanation": "David was the youngest of the eight sons of Jesse the Bethlehemite.",
+    "reference": "1 Samuel 17:12"
+  },
+  {
+    "id": "en-ot-m-12",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "What instrument did David play to soothe King Saul?",
+    "options": [
+      "A flute",
+      "A harp/lyre",
+      "A trumpet",
+      "A tambourine"
+    ],
+    "answer": "A harp/lyre",
+    "explanation": "Whenever the tormenting spirit came upon Saul, David would play his lyre and Saul would feel better.",
+    "reference": "1 Samuel 16:23"
+  },
+  {
+    "id": "en-ot-m-13",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Which Jewish holiday celebrates the Israelites' deliverance from the final plague in Egypt?",
+    "options": [
+      "Purim",
+      "Hannukah",
+      "Passover",
+      "Yom Kippur"
+    ],
+    "answer": "Passover",
+    "explanation": "The Lord passed over the houses of the Israelites when He struck down the firstborn of Egypt.",
+    "reference": "Exodus 12:27"
+  },
+  {
+    "id": "en-ot-h-11",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Where was Moses when he died?",
+    "options": [
+      "Jericho",
+      "Mount Sinai",
+      "Mount Nebo",
+      "Jerusalem"
+    ],
+    "answer": "Mount Nebo",
+    "explanation": "Moses climbed Mount Nebo and God showed him the Promised Land before he died there.",
+    "reference": "Deuteronomy 34:1"
+  },
+  {
+    "id": "en-ot-h-12",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Who was the first king of the divided Northern Kingdom of Israel?",
+    "options": [
+      "Jeroboam",
+      "Rehoboam",
+      "Omri",
+      "Ahab"
+    ],
+    "answer": "Jeroboam",
+    "explanation": "Jeroboam an official of Solomon lead a rebellion and became King of the northern ten tribes.",
+    "reference": "1 Kings 12:20"
+  },
+  {
+    "id": "en-gos-e-8",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "In what town did Jesus grow up?",
+    "options": [
+      "Bethlehem",
+      "Nazareth",
+      "Jerusalem",
+      "Capernaum"
+    ],
+    "answer": "Nazareth",
+    "explanation": "He went and lived in a town called Nazareth, fulfilling the prophecy.",
+    "reference": "Matthew 2:23"
+  },
+  {
+    "id": "en-gos-e-9",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Who washed the disciples' feet at the Last Supper?",
+    "options": [
+      "Peter",
+      "John",
+      "Jesus",
+      "Mary"
+    ],
+    "answer": "Jesus",
+    "explanation": "Jesus washed his disciples' feet to show them how to love and serve one another.",
+    "reference": "John 13:5"
+  },
+  {
+    "id": "en-gos-m-8",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "According to John's Gospel, what was the name of the man Jesus raised from the dead after four days?",
+    "options": [
+      "Jairus",
+      "Zacchaeus",
+      "Lazarus",
+      "Nicodemus"
+    ],
+    "answer": "Lazarus",
+    "explanation": "Jesus cried out in a loud voice, 'Lazarus, come out!'",
+    "reference": "John 11:43"
+  },
+  {
+    "id": "en-gos-m-9",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "What did Jesus feed to the crowd of 5,000 men?",
+    "options": [
+      "Seven loaves and a few fish",
+      "Five loaves and two fish",
+      "Manna from heaven",
+      "Roasted lamb"
+    ],
+    "answer": "Five loaves and two fish",
+    "explanation": "A boy had five small barley loaves and two small fish, which Jesus multiplied.",
+    "reference": "John 6:9"
+  },
+  {
+    "id": "en-gos-h-8",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "Who helped Jesus carry His cross?",
+    "options": [
+      "Simon of Cyrene",
+      "Joseph of Arimathea",
+      "Nicodemus",
+      "John the Apostle"
+    ],
+    "answer": "Simon of Cyrene",
+    "explanation": "As they led Him away, they seized a man, Simon of Cyrene, and put the cross on him.",
+    "reference": "Luke 23:26"
+  },
+  {
+    "id": "en-gos-h-9",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "To whom did Jesus say, 'Feed my sheep'?",
+    "options": [
+      "John",
+      "James",
+      "Peter",
+      "Paul"
+    ],
+    "answer": "Peter",
+    "explanation": "After his resurrection, Jesus restored Peter by telling him three times to feed his sheep.",
+    "reference": "John 21:17"
+  },
+  {
+    "id": "en-nt-e-9",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Which author wrote the most books in the New Testament?",
+    "options": [
+      "John",
+      "Luke",
+      "Peter",
+      "Paul"
+    ],
+    "answer": "Paul",
+    "explanation": "Paul authored 13 of the 27 books in the New Testament.",
+    "reference": "Biblical study"
+  },
+  {
+    "id": "en-nt-e-10",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Where did John write the Book of Revelation?",
+    "options": [
+      "Rome",
+      "Jerusalem",
+      "The Isle of Patmos",
+      "Ephesus"
+    ],
+    "answer": "The Isle of Patmos",
+    "explanation": "John was exiled to the island of Patmos because of the word of God.",
+    "reference": "Revelation 1:9"
+  },
+  {
+    "id": "en-nt-m-9",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who was a seller of purple cloth who became a key convert and hosted the church in Philippi?",
+    "options": [
+      "Priscilla",
+      "Lydia",
+      "Phoebe",
+      "Chloe"
+    ],
+    "answer": "Lydia",
+    "explanation": "Lydia, a dealer in purple cloth from Thyatira, opened her heart to Paul's message.",
+    "reference": "Acts 16:14"
+  },
+  {
+    "id": "en-nt-m-10",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "What magical practice did Simon the Sorcerer try to purchase from the Apostles?",
+    "options": [
+      "The ability to heal",
+      "The power of the Holy Spirit",
+      "The ability to prophesy",
+      "The secret of walking on water"
+    ],
+    "answer": "The power of the Holy Spirit",
+    "explanation": "Simon offered them money so that anyone he laid hands on could receive the Holy Spirit.",
+    "reference": "Acts 8:18-19"
+  },
+  {
+    "id": "en-nt-h-9",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "What runaway slave did Paul send back to his master with a letter of reconciliation?",
+    "options": [
+      "Onesimus",
+      "Epaphras",
+      "Tychicus",
+      "Philemon"
+    ],
+    "answer": "Onesimus",
+    "explanation": "Paul appealed to Philemon to accept Onesimus back, not as a slave, but as a brother.",
+    "reference": "Philemon 1:10-16"
+  },
+  {
+    "id": "en-nt-h-10",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "In the armor of God (Ephesians 6), what represents faith?",
+    "options": [
+      "The sword",
+      "The shield",
+      "The breastplate",
+      "The helmet"
+    ],
+    "answer": "The shield",
+    "explanation": "Paul says to take up the 'shield of faith, with which you can extinguish all the flaming arrows of the evil one.'",
+    "reference": "Ephesians 6:16"
+  },
+  {
+    "id": "en-ot-e-14",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Who was swallowed by a great fish?",
+    "options": [
+      "Jonah",
+      "Peter",
+      "Moses",
+      "Daniel"
+    ],
+    "answer": "Jonah",
+    "explanation": "Jonah was swallowed by a great fish when he tried to flee from God's command.",
+    "reference": "Jonah 1:17"
+  },
+  {
+    "id": "en-ot-e-15",
+    "scope": "Old Testament",
+    "difficulty": "Easy",
+    "question": "Which young boy defeated a giant with a sling and stone?",
+    "options": [
+      "Saul",
+      "Jonathan",
+      "Solomon",
+      "David"
+    ],
+    "answer": "David",
+    "explanation": "David, a young shepherd, defeated the Philistine giant Goliath.",
+    "reference": "1 Samuel 17:50"
+  },
+  {
+    "id": "en-ot-m-14",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "What instrument did Joshua's army use to bring down the walls of Jericho?",
+    "options": [
+      "Drums",
+      "Ram's horn trumpets",
+      "Harps",
+      "Cymbals"
+    ],
+    "answer": "Ram's horn trumpets",
+    "explanation": "Seven priests carried trumpets of rams' horns ahead of the ark.",
+    "reference": "Joshua 6:4"
+  },
+  {
+    "id": "en-ot-m-15",
+    "scope": "Old Testament",
+    "difficulty": "Medium",
+    "question": "Who was the mother of Samuel, who prayed fervently for a child?",
+    "options": [
+      "Hannah",
+      "Peninnah",
+      "Sarah",
+      "Rebekah"
+    ],
+    "answer": "Hannah",
+    "explanation": "Hannah prayed to the Lord weeping bitterly, vowing to dedicate her son to God.",
+    "reference": "1 Samuel 1:10"
+  },
+  {
+    "id": "en-ot-h-13",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "Which prophet confronted King Ahab and Queen Jezebel on Mount Carmel?",
+    "options": [
+      "Elisha",
+      "Jeremiah",
+      "Isaiah",
+      "Elijah"
+    ],
+    "answer": "Elijah",
+    "explanation": "Elijah challenged the prophets of Baal to prove whose God was real.",
+    "reference": "1 Kings 18:20-40"
+  },
+  {
+    "id": "en-ot-h-14",
+    "scope": "Old Testament",
+    "difficulty": "Hard",
+    "question": "What was the name of King Saul's son, who became David's closest friend?",
+    "options": [
+      "Abner",
+      "Jonathan",
+      "Ish-Bosheth",
+      "Mephibosheth"
+    ],
+    "answer": "Jonathan",
+    "explanation": "Jonathan became one in spirit with David, and he loved him as himself.",
+    "reference": "1 Samuel 18:1"
+  },
+  {
+    "id": "en-gos-e-10",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "What trade did Jesus learn from his earthly father, Joseph?",
+    "options": [
+      "Fisherman",
+      "Tax Collector",
+      "Carpenter",
+      "Shepherd"
+    ],
+    "answer": "Carpenter",
+    "explanation": "Jesus is referred to as 'the carpenter's son' and 'the carpenter'.",
+    "reference": "Mark 6:3"
+  },
+  {
+    "id": "en-gos-e-11",
+    "scope": "The Gospels",
+    "difficulty": "Easy",
+    "question": "Who betrayed Jesus to the religious leaders?",
+    "options": [
+      "Peter",
+      "John",
+      "Judas Iscariot",
+      "Thomas"
+    ],
+    "answer": "Judas Iscariot",
+    "explanation": "Judas went to the chief priests to betray Jesus for 30 pieces of silver.",
+    "reference": "Matthew 26:14"
+  },
+  {
+    "id": "en-gos-m-10",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "In the parable of the Prodigal Son, what did the older brother refuse to do?",
+    "options": [
+      "Work in the fields",
+      "Forgive his father",
+      "Join the celebration feast",
+      "Give his inheritance away"
+    ],
+    "answer": "Join the celebration feast",
+    "explanation": "The older brother became angry and refused to go in to the feast for his returned brother.",
+    "reference": "Luke 15:28"
+  },
+  {
+    "id": "en-gos-m-11",
+    "scope": "The Gospels",
+    "difficulty": "Medium",
+    "question": "What did Jesus say when he healed the paralytic lowered through the roof?",
+    "options": [
+      "Rise and walk",
+      "Your sins are forgiven",
+      "Your faith has healed you",
+      "Be clean"
+    ],
+    "answer": "Your sins are forgiven",
+    "explanation": "Jesus first forgave his sins, which offended the teachers of the law.",
+    "reference": "Mark 2:5"
+  },
+  {
+    "id": "en-gos-h-10",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "To whom did Jesus say: 'Get up! Pick up your mat and walk' at the pool of Bethesda?",
+    "options": [
+      "A man born blind",
+      "A lame beggar",
+      "An invalid for 38 years",
+      "A paralyzed servant"
+    ],
+    "answer": "An invalid for 38 years",
+    "explanation": "The man had been an invalid for thirty-eight years before Jesus healed him.",
+    "reference": "John 5:5-8"
+  },
+  {
+    "id": "en-gos-h-11",
+    "scope": "The Gospels",
+    "difficulty": "Hard",
+    "question": "What was the name of the man whose ear Peter cut off during Jesus' arrest?",
+    "options": [
+      "Malchus",
+      "Caiaphas",
+      "Barabbas",
+      "Simon"
+    ],
+    "answer": "Malchus",
+    "explanation": "Simon Peter drew his sword and struck the high priest's servant, cutting off his right ear. The servant's name was Malchus.",
+    "reference": "John 18:10"
+  },
+  {
+    "id": "en-nt-e-11",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "Which disciple was known for doubting Jesus' resurrection until he saw Him?",
+    "options": [
+      "Judas",
+      "Peter",
+      "John",
+      "Thomas"
+    ],
+    "answer": "Thomas",
+    "explanation": "Thomas said he would not believe unless he saw the nail marks in His hands.",
+    "reference": "John 20:25"
+  },
+  {
+    "id": "en-nt-e-12",
+    "scope": "New Testament",
+    "difficulty": "Easy",
+    "question": "What descended on Jesus like a dove during His baptism?",
+    "options": [
+      "An angel",
+      "A cloud",
+      "The Holy Spirit",
+      "A blazing light"
+    ],
+    "answer": "The Holy Spirit",
+    "explanation": "He saw the Spirit of God descending like a dove and alighting on him.",
+    "reference": "Matthew 3:16"
+  },
+  {
+    "id": "en-nt-m-11",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who wrote the Acts of the Apostles?",
+    "options": [
+      "Paul",
+      "Peter",
+      "John",
+      "Luke"
+    ],
+    "answer": "Luke",
+    "explanation": "Luke, the physician, wrote both the Gospel of Luke and the Acts of the Apostles.",
+    "reference": "Biblical study"
+  },
+  {
+    "id": "en-nt-m-12",
+    "scope": "New Testament",
+    "difficulty": "Medium",
+    "question": "Who was the High Priest who questioned Jesus before the Sanhedrin?",
+    "options": [
+      "Annas",
+      "Caiaphas",
+      "Nicodemus",
+      "Gamaliel"
+    ],
+    "answer": "Caiaphas",
+    "explanation": "Jesus was brought before Caiaphas, the high priest, where the teachers of the law were assembled.",
+    "reference": "Matthew 26:57"
+  },
+  {
+    "id": "en-nt-h-11",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "Who was chosen by lot to replace Judas Iscariot as the 12th Apostle?",
+    "options": [
+      "Barsabbas",
+      "Matthias",
+      "Paul",
+      "Barnabas"
+    ],
+    "answer": "Matthias",
+    "explanation": "They cast lots, and the lot fell to Matthias.",
+    "reference": "Acts 1:26"
+  },
+  {
+    "id": "en-nt-h-12",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "In Revelation, what is the name of the star that fell from heaven and turned a third of the waters bitter?",
+    "options": [
+      "Morning Star",
+      "Wormwood",
+      "Lucifer",
+      "Leviathan"
+    ],
+    "answer": "Wormwood",
+    "explanation": "The name of the star is Wormwood. A third of the waters turned bitter.",
+    "reference": "Revelation 8:11"
+  },
+  {
+    "id": "en-nt-h-13",
+    "scope": "New Testament",
+    "difficulty": "Hard",
+    "question": "Which Jewish ruling council member defended Jesus and helped bury Him?",
+    "options": [
+      "Joseph of Arimathea",
+      "Caiaphas",
+      "Annas",
+      "Nicodemus"
+    ],
+    "answer": "Nicodemus",
+    "explanation": "Nicodemus accompanied Joseph of Arimathea and brought a mixture of myrrh and aloes to prepare Jesus' body.",
+    "reference": "John 19:39"
+  }
 ]
