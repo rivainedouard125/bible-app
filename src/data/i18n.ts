@@ -23,8 +23,8 @@ export const translations = {
     readAction: "Read",
 
     // Actions
-    aiQuizTitle: "AI Bible Quiz",
-    aiQuizSub: "Test your knowledge with AI-generated questions",
+    aiQuizTitle: "Bible Quiz",
+    aiQuizSub: "Test your knowledge with these questions",
     aiStudyTitle: "AI Study Assistant",
     aiStudySub: "Ask questions and explore scripture context",
     jesusJourneyTitle: "The Story of Jesus Christ",
@@ -286,8 +286,8 @@ export const translations = {
     readAction: "Lire",
 
     // Actions
-    aiQuizTitle: "Quiz Biblique par l'IA",
-    aiQuizSub: "Testez vos connaissances avec des questions générées par l'IA",
+    aiQuizTitle: "Quiz Biblique",
+    aiQuizSub: "Testez vos connaissances avec ces questions",
     aiStudyTitle: "Assistant d'Étude IA",
     aiStudySub: "Posez des questions et explorez le contexte biblique",
     jesusJourneyTitle: "L'Histoire de Jésus-Christ",

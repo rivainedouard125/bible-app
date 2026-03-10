@@ -40,10 +40,6 @@ type BibleData = {
   "New Testament": Book[];
 };
 
-type ChatMessage = {
-  role: 'user' | 'assistant';
-  content: string;
-};
 
 const BIBLES: Record<string, BibleData> = {
   en: bibleDataEn as unknown as BibleData,
@@ -107,15 +103,6 @@ function App() {
   });
 
   // AI State
-  const [isAiSidebarOpen, setIsAiSidebarOpen] = useState(false);
-  const [aiChat, setAiChat] = useState<ChatMessage[]>([]);
-  const [aiInput, setAiInput] = useState('');
-  const [isAiLoading, setIsAiLoading] = useState(false);
-  const [llmModel, setLlmModel] = useState('mistral'); // default fallback
-  const [availableModels, setAvailableModels] = useState<string[]>([]);
-
-  const [tooltipPos, setTooltipPos] = useState<{ x: number, y: number } | null>(null);
-  const [highlightedText, setHighlightedText] = useState('');
 
   // Features State
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -140,7 +127,6 @@ function App() {
     return saved ? parseFloat(saved) : 1.8;
   });
 
-  const chatEndRef = useRef<HTMLDivElement>(null);
   const verseRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Sync readChapters FROM Supabase when user logs in
@@ -182,51 +168,7 @@ function App() {
     document.documentElement.style.setProperty('--reading-line-height', lineHeight.toString());
   }, [lineHeight]);
 
-  useEffect(() => {
-    // Try to discover which local Ollama model is available
-    fetch('/api/ai/tags')
-      .then(res => res.json())
-      .then(data => {
-        if (data.models && data.models.length > 0) {
-          const models = data.models.map((m: any) => m.name);
-          setAvailableModels(models);
-          if (models.includes('mistral:latest')) setLlmModel('mistral:latest');
-          else if (models.includes('mistral')) setLlmModel('mistral');
-          else setLlmModel(models[0]);
-        }
-      })
-      .catch(e => console.log('Ollama may not be running yet.', e));
-  }, []);
 
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [aiChat]);
-
-  // Handle text selection in Reading View
-  useEffect(() => {
-    const handleSelection = () => {
-      const selection = window.getSelection();
-      if (selection && selection.toString().trim().length > 0 && chapter) {
-        const range = selection.getRangeAt(0);
-        const rect = range.getBoundingClientRect();
-        setHighlightedText(selection.toString().trim());
-        setTooltipPos({
-          x: rect.left + rect.width / 2,
-          y: rect.top + window.scrollY
-        });
-      } else {
-        // We delay clearing the tooltip slightly to allow clicks on it
-        setTimeout(() => {
-          const s = window.getSelection();
-          if (!s || s.toString().trim().length === 0) {
-            setTooltipPos(null);
-          }
-        }, 100);
-      }
-    };
-    document.addEventListener('mouseup', handleSelection);
-    return () => document.removeEventListener('mouseup', handleSelection);
-  }, [chapter]);
 
   // Compute global progress
   const { totalChapters, readChaptersCount } = useMemo(() => {
@@ -317,7 +259,7 @@ function App() {
     setTestament(null);
     setBook(null);
     setChapter(null);
-    setIsAiSidebarOpen(false);
+
     setIsJesusJourneyOpen(false);
     setIsJesusReadingMode(false);
     setIsUserProfileOpen(false);
@@ -331,50 +273,7 @@ function App() {
     setChapter(null);
   };
 
-  // AI Actions
-  const openAskAI = () => {
-    setIsAiSidebarOpen(true);
-    setTooltipPos(null); // hide tooltip
-    if (highlightedText && book && chapter) {
-      const prompt = `Can you explain or give me context on this passage from ${book.name} ${chapter.chapter}:\n\n"${highlightedText}"`;
-      setAiInput(prompt);
-    }
-  };
 
-  const sendAiMessage = async (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    if (!aiInput.trim() || isAiLoading) return;
-
-    const userMsg = aiInput.trim();
-    const newChat: ChatMessage[] = [...aiChat, { role: 'user', content: userMsg }];
-    setAiChat(newChat);
-    setAiInput('');
-    setIsAiLoading(true);
-
-    try {
-      const response = await fetch('/api/ai/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: llmModel,
-          messages: [
-            { role: 'system', content: 'You are a highly knowledgeable, helpful, and concise AI Bible Study Assistant. You help users understand scripture, historical context, and theology. Keep responses readable and brief.' },
-            ...newChat
-          ],
-          stream: false
-        })
-      });
-
-      if (!response.ok) throw new Error('Network response was not ok');
-      const data = await response.json();
-      setAiChat([...newChat, { role: 'assistant', content: data.message.content }]);
-    } catch (err) {
-      console.error(err);
-      setAiChat([...newChat, { role: 'assistant', content: 'Oops! I could not connect to your local Ollama instance. Is it running on your Mac?' }]);
-    } finally {
-      setIsAiLoading(false);
-    }
-  };
 
   const Background = () => (
     <div className="bg-subtle-pattern"></div>
@@ -695,13 +594,7 @@ function App() {
             </div>
             <span className="home-action-arrow">→</span>
           </button>
-          <button className="home-action-card" onClick={() => setIsAiSidebarOpen(true)}>
-            <div>
-              <h3 className="home-action-title">{t('aiStudyTitle')}</h3>
-              <p className="home-action-sub">{t('aiStudySub')}</p>
-            </div>
-            <span className="home-action-arrow">→</span>
-          </button>
+
           <button className="home-action-card" onClick={() => setIsGlossaryOpen(true)}>
             <div>
               <h3 className="home-action-title">{t('glossaryEntryTitle' as any)}</h3>
@@ -851,85 +744,15 @@ function App() {
           </div>
         </div>
 
-        {/* Highlight Tooltip */}
-        {tooltipPos && (
-          <div
-            className="ai-tooltip"
-            style={{ left: tooltipPos.x, top: tooltipPos.y - 45 }}
-            onClick={(e) => { e.stopPropagation(); openAskAI(); }}
-          >
-            ✨ Ask AI
-          </div>
-        )}
+
       </div>
     );
   };
 
-  const renderAiSidebar = () => {
-    return (
-      <div className={`ai-sidebar ${isAiSidebarOpen ? 'open' : ''}`}>
-        <div className="ai-sidebar-header">
-          <span>✨ {t('studyAssistant')}</span>
-          <button className="ai-close-btn" onClick={() => setIsAiSidebarOpen(false)}>×</button>
-        </div>
 
-        <div style={{ padding: '0.75rem 1.5rem', background: 'var(--border-subtle)', borderBottom: '1px solid var(--border-strong)', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem' }}>
-          <span style={{ color: 'var(--text-secondary)' }}>{t('model')}:</span>
-          {availableModels.length > 0 ? (
-            <select
-              value={llmModel}
-              onChange={e => setLlmModel(e.target.value)}
-              style={{ background: 'transparent', border: 'none', fontWeight: 600, color: 'var(--text-primary)', outline: 'none', cursor: 'pointer' }}
-            >
-              {availableModels.map(m => <option key={m} value={m}>{m}</option>)}
-            </select>
-          ) : (
-            <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{llmModel}</span>
-          )}
-        </div>
-
-        <div className="ai-chat-area">
-          {aiChat.length === 0 && (
-            <div style={{ color: 'var(--text-secondary)', textAlign: 'center', marginTop: '2rem' }}>
-              {t('aiInitialPrompt')}
-              {availableModels.length === 0 && (
-                <div style={{ marginTop: '1rem', color: '#ef4444', fontSize: '0.85rem' }}>
-                  {t('ollamaNotDetected')}
-                </div>
-              )}
-            </div>
-          )}
-          {aiChat.map((msg, idx) => (
-            <div key={idx} className={`ai-bubble ${msg.role}`}>
-              {msg.content}
-            </div>
-          ))}
-          {isAiLoading && (
-            <div className={`ai-bubble ai`}>
-              <span style={{ opacity: 0.5 }}>Thinking...</span>
-            </div>
-          )}
-          <div ref={chatEndRef} />
-        </div>
-        <form className="ai-input-area" onSubmit={sendAiMessage}>
-          <input
-            type="text"
-            className="ai-input"
-            placeholder={t('aiPlaceholder')}
-            value={aiInput}
-            onChange={(e) => setAiInput(e.target.value)}
-            disabled={isAiLoading}
-          />
-          <button type="submit" className="ai-send-btn" disabled={!aiInput.trim() || isAiLoading}>
-            Send
-          </button>
-        </form>
-      </div>
-    );
-  };
 
   if (isQuizOpen) {
-    return <Quiz llmModel={llmModel} onClose={() => setIsQuizOpen(false)} />;
+    return <Quiz onClose={() => setIsQuizOpen(false)} />;
   }
 
   if (isCommunityOpen) {
@@ -981,7 +804,6 @@ function App() {
           }}
           onClose={() => setIsJesusJourneyOpen(false)}
         />
-        {renderAiSidebar()}
       </>
     );
   }
@@ -1028,7 +850,6 @@ function App() {
       {chapter && renderReadingView()}
 
       {/* Universal Components */}
-      {renderAiSidebar()}
     </>
   );
 }

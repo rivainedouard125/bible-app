@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useI18n } from '../hooks/i18nContext';
+import quizEn from '../data/quiz-en.json';
+import quizFr from '../data/quiz-fr.json';
 import '../index.css';
 
 type QuizQuestion = {
@@ -17,11 +19,10 @@ type UserResponse = {
 };
 
 type QuizProps = {
-    llmModel: string;
     onClose: () => void;
 };
 
-export default function Quiz({ llmModel, onClose }: QuizProps) {
+export default function Quiz({ onClose }: QuizProps) {
     const { t, lang } = useI18n();
     const [scope, setScope] = useState('Overall Bible');
     const [difficulty, setDifficulty] = useState('Medium');
@@ -35,7 +36,7 @@ export default function Quiz({ llmModel, onClose }: QuizProps) {
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [showResult, setShowResult] = useState(false);
 
-    const generateQuiz = async () => {
+    const generateQuiz = () => {
         setIsGenerating(true);
         setQuestions([]);
         setUserResponses([]);
@@ -44,97 +45,30 @@ export default function Quiz({ llmModel, onClose }: QuizProps) {
         setShowResult(false);
         setSelectedAnswer(null);
 
-        const prompt = `Generate a ${questionCount}-question multiple choice quiz about ${scope} at a ${difficulty} difficulty level.
-${lang === 'fr' ? 'IMPORTANT: You MUST write the questions, options, and explanations in French.' : ''}
-Respond ONLY with a raw JSON object. Do NOT include prefixes like "A:", "B:", or "1." in the options.
-CRITICAL: The "answer" field MUST be EXACTLY the same string as one of the four strings in the "options" array.
-Format:
-{
-  "questions": [
-    {
-      "question": "Who built the ark?",
-      "options": ["Noah", "Abraham", "Moses", "David"],
-      "answer": "Noah",
-      "explanation": "God told Noah to build an ark to save his family and animals from the flood.",
-      "reference": "Genesis 6:14-22"
-    }
-  ]
-}`;
+        // 1. Select the correct language dataset
+        const dataset = lang === 'fr' ? quizFr : quizEn;
 
+        // 2. Filter the dataset based on user selection (Scope & Difficulty)
+        // If the user selects "Medium", we can optionally include Easy questions too so the pool is larger,
+        // but for now we strictly filter to match.
+        const filteredPool = dataset.filter(q => 
+            q.scope === scope && q.difficulty === difficulty
+        );
 
-        try {
-            const response = await fetch('/api/ai/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    model: llmModel,
-                    messages: [{ role: 'user', content: prompt }],
-                    stream: false,
-                    format: 'json'
-                })
-            });
+        // 3. Fallback: If we don't have enough exact matches, just use the whole language dataset
+        const poolToUse = filteredPool.length >= questionCount ? filteredPool : dataset;
 
-            if (!response.ok) throw new Error('API Error');
-            const data = await response.json();
-            const parsed = JSON.parse(data.message.content);
+        // 4. Shuffle the pool randomly
+        const shuffled = [...poolToUse].sort(() => 0.5 - Math.random());
 
-            if (parsed.questions && Array.isArray(parsed.questions)) {
-                // Safety net: Ensure answer is always in options (even if LLM fails)
-                const validatedQuestions = parsed.questions.map((q: QuizQuestion) => {
-                    const hasAnswer = q.options.some(opt => 
-                        opt.trim().toLowerCase() === q.answer.trim().toLowerCase()
-                    );
-                    if (!hasAnswer && q.options.length > 0) {
-                        const randomIndex = Math.floor(Math.random() * q.options.length);
-                        q.options[randomIndex] = q.answer;
-                    }
-                    return q;
-                });
-                setQuestions(validatedQuestions);
-            } else {
-                throw new Error('Invalid JSON structure');
-            }
-        } catch (err) {
-            console.error('Quiz Generation Error', err);
-            // Fallback questions if Ollama fails or is offline
-            if (lang === 'fr') {
-                setQuestions([
-                    {
-                        question: "Qui a construit l'arche ?",
-                        options: ["Noé", "Moïse", "Abraham", "David"],
-                        answer: "Noé",
-                        explanation: "Noé a construit l'arche selon les instructions de Dieu pour sauver sa famille et les animaux durant le déluge.",
-                        reference: "Genèse 6:14"
-                    },
-                    {
-                        question: "En combien de jours Dieu a-t-il créé le monde ?",
-                        options: ["3", "5", "6", "7"],
-                        answer: "6",
-                        explanation: "La Bible déclare que Dieu a créé le monde en six jours et s'est reposé le septième jour.",
-                        reference: "Genèse 1"
-                    }
-                ]);
-            } else {
-                setQuestions([
-                    {
-                        question: "Who built the ark?",
-                        options: ["Noah", "Moses", "Abraham", "David"],
-                        answer: "Noah",
-                        explanation: "Noah built the ark according to God's instructions to save his family and the animals.",
-                        reference: "Genesis 6:14"
-                    },
-                    {
-                        question: "How many days did it take God to create the world?",
-                        options: ["3", "5", "6", "7"],
-                        answer: "6",
-                        explanation: "The Bible states that God created the world in six days and rested on the seventh.",
-                        reference: "Genesis 1"
-                    }
-                ]);
-            }
-        } finally {
+        // 5. Slice the requested number of questions
+        const selectedQuestions = shuffled.slice(0, questionCount);
+
+        // Add a tiny delay just so the button "Loading" state flickers for UX, feeling like it built something
+        setTimeout(() => {
+            setQuestions(selectedQuestions);
             setIsGenerating(false);
-        }
+        }, 400);
     };
 
     const checkAnswer = (opt: string, ans: string) => {
