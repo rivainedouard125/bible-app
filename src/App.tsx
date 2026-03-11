@@ -55,6 +55,62 @@ const CheckIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const SearchIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="11" cy="11" r="8"></circle>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+);
+
+const GlobeIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+  </svg>
+);
+
+const SettingsIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="3"></circle>
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+  </svg>
+);
+
+const UserIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+    <circle cx="12" cy="7" r="4"></circle>
+  </svg>
+);
+
+const SunIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+);
+
+const MoonIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+);
+
+const HomeIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+  </svg>
+);
+
 function App() {
   const { lang, t } = useI18n();
   
@@ -111,6 +167,7 @@ function App() {
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileSearchVisible, setIsMobileSearchVisible] = useState(false);
   const [isTypoOpen, setIsTypoOpen] = useState(false);
 
   // Search State
@@ -279,36 +336,66 @@ function App() {
     <div className="bg-subtle-pattern"></div>
   );
 
-  const ProgressBar = ({ percentage }: { percentage: number }) => (
-    <div className="progress-bar-container">
-      <div className="progress-bar-fill" style={{ width: `${percentage}%` }}></div>
-    </div>
-  );
+
 
   // Reusable Top Navigation Bar
   const renderNavBar = () => (
     <div className="nav-bar-glass">
 
-      {/* LEFT: Title + Scripture Selector */}
+      {/* LEFT: Title + Home */}
       <div className="nav-left">
-        <h3 className="nav-title" onClick={resetAll}>
-          {t('appTitle')}
-        </h3>
-        <ScriptureSelector
-          currentScriptureId={scriptureId}
-          onSelect={(id) => {
-            setScriptureId(id);
-            // Reset reading position if switching texts
-            setTestament(null);
-            setBook(null);
-            setChapter(null);
-            setIsJesusReadingMode(false);
-          }}
-        />
+        <button 
+          className={`glass-button ${(!isTimelineOpen && !isGlossaryOpen && !isQuizOpen && !isCommunityOpen && !isJesusJourneyOpen && !isUserProfileOpen) ? 'active' : ''}`}
+          style={{ width: '42px', height: '42px', borderRadius: '50%', padding: 0 }}
+          onClick={resetAll}
+          title="Home"
+        >
+          <HomeIcon />
+        </button>
+        <div className="nav-scripture-wrap">
+          <ScriptureSelector
+            currentScriptureId={scriptureId}
+            onSelect={(id) => {
+              setScriptureId(id);
+              setTestament(null);
+              setBook(null);
+              setChapter(null);
+              setIsJesusReadingMode(false);
+            }}
+          />
+        </div>
+      </div>
+
+      {/* CENTER: Navigation Tabs */}
+      <div className="nav-links hide-mobile">
+        <button 
+          className={`nav-link ${(!isTimelineOpen && !isGlossaryOpen && !isQuizOpen && !isJesusJourneyOpen) ? 'active' : ''}`}
+          onClick={resetAll}
+        >
+          Bible
+        </button>
+        <button 
+          className={`nav-link ${isTimelineOpen ? 'active' : ''}`}
+          onClick={() => { resetAll(); setIsTimelineOpen(true); }}
+        >
+          Timeline
+        </button>
+        <button 
+          className={`nav-link ${isGlossaryOpen ? 'active' : ''}`}
+          onClick={() => { resetAll(); setIsGlossaryOpen(true); }}
+        >
+          Characters
+        </button>
+        <button 
+          className={`nav-link ${isQuizOpen ? 'active' : ''}`}
+          onClick={() => { resetAll(); setIsQuizOpen(true); }}
+        >
+          Quiz
+        </button>
       </div>
 
       {/* CENTER: Search */}
-      <div className="nav-search">
+      <div className={`nav-search ${isMobileSearchVisible ? 'mobile-visible' : ''}`}>
         <input
           type="text"
           placeholder={t('searchPlaceholder')}
@@ -320,6 +407,12 @@ function App() {
           }}
           onFocus={() => setIsSearchOpen(true)}
         />
+        <button 
+          className="mobile-search-close"
+          onClick={() => setIsMobileSearchVisible(false)}
+        >
+          ✕
+        </button>
         {isSearchOpen && searchResults.length > 0 && (
           <div className="glass-container" style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', width: '380px', maxHeight: '380px', overflowY: 'auto', marginTop: '0.5rem', padding: '0.5rem', zIndex: 200, boxShadow: 'var(--shadow-glow)' }}>
             {searchResults.map((res, i) => (
@@ -373,23 +466,35 @@ function App() {
 
       {/* RIGHT: Controls */}
       <div className="nav-right">
+        {/* Mobile Search Toggle */}
+        <button
+          className="glass-button show-mobile search-toggle-btn"
+          style={{ width: '38px', height: '38px', borderRadius: '50%', padding: 0 }}
+          onClick={() => setIsMobileSearchVisible(true)}
+          title="Search"
+        >
+          <SearchIcon />
+        </button>
+
         {/* Community */}
         <button
           className="glass-button community-btn-nav"
+          style={{ height: '38px', borderRadius: '20px' }}
           onClick={() => setIsCommunityOpen(true)}
           title="Community Forum"
         >
-          🌐 <span className="hide-mobile">Community</span>
+          <GlobeIcon />
+          <span className="hide-mobile">Community</span>
         </button>
         {/* Settings Dropdown (Typography, Language, Theme) */}
         <div style={{ position: 'relative' }} className="typo-container">
           <button
             className="glass-button"
-            style={{ width: '38px', height: '38px', padding: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%', fontSize: '16px' }}
+            style={{ width: '38px', height: '38px', padding: 0, display: 'flex', justifyContent: 'center', alignItems: 'center', borderRadius: '50%' }}
             onClick={() => setIsTypoOpen(!isTypoOpen)}
             title="Settings"
           >
-            ⚙️
+            <SettingsIcon />
           </button>
           {isTypoOpen && (
             <div className="typo-popover" style={{ width: '260px' }}>
@@ -424,7 +529,7 @@ function App() {
                   onClick={() => setIsDarkMode(!isDarkMode)}
                   title="Toggle Theme"
                 >
-                  {isDarkMode ? '☀️' : '🌙'}
+                  {isDarkMode ? <SunIcon /> : <MoonIcon />}
                 </button>
               </div>
             </div>
@@ -433,7 +538,12 @@ function App() {
 
         {/* Avatar / Profile */}
         {(() => {
-          const religionSymbol: Record<string, string> = { Christianity: '✝', Islam: '☪', Judaism: '✡', Other: '☮' };
+          const religionSymbol: Record<string, React.ReactNode> = { 
+            Christianity: <span style={{ fontSize: '10px' }}>✝</span>, 
+            Islam: <span style={{ fontSize: '10px' }}>☪</span>, 
+            Judaism: <span style={{ fontSize: '10px' }}>✡</span>, 
+            Other: <span style={{ fontSize: '10px' }}>☮</span> 
+          };
           return (
             <div style={{ position: 'relative', display: 'inline-block' }}>
               <button
@@ -444,7 +554,7 @@ function App() {
                 {profile?.avatar_url ? (
                   <img src={profile.avatar_url} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
-                  <span style={{ fontSize: '16px' }}>👤</span>
+                  <UserIcon />
                 )}
               </button>
               {profile?.religion && (
@@ -487,17 +597,20 @@ function App() {
     ) || 0;
 
     const scriptureConfig = SCRIPTURES.find(s => s.id === scriptureId) || SCRIPTURES[0];
-    const flagEmoji = 
-      scriptureConfig.language === 'English' ? '🇬🇧' : 
-      scriptureConfig.language === 'Français' ? '🇫🇷' : 
-      scriptureConfig.language === 'Español' ? '🇪🇸' : 
-      scriptureConfig.language === 'Deutsch' ? '🇩🇪' : '📖';
+    const flagCode = 
+      scriptureConfig.language === 'English' ? 'gb' : 
+      scriptureConfig.language === 'Français' ? 'fr' : 
+      scriptureConfig.language === 'Español' ? 'es' : 
+      scriptureConfig.language === 'Deutsch' ? 'de' : null;
 
     return (
       <div className="home-page">
         {/* Hero */}
         <section className="home-hero">
-          <div className="home-hero-tag">{scriptureConfig.name} {flagEmoji}</div>
+          <div className="home-hero-tag">
+            {flagCode && <img src={`https://flagcdn.com/w40/${flagCode}.png`} className="flag-icon" style={{ marginRight: '8px' }} alt="" />}
+            {scriptureConfig.name}
+          </div>
           <h1 className="home-hero-title">{t('appTitle')}</h1>
           <p className="home-hero-sub">{t('exploreScripture')}</p>
           <div className="home-progress-wrap">
@@ -515,9 +628,15 @@ function App() {
         {/* Jesus Journey */}
         <section className="home-section">
           <button className="jesus-journey-btn" style={{ maxWidth: '100%' }} onClick={() => setIsJesusJourneyOpen(true)}>
-            <span className="jesus-btn-cross">✝</span>
-            <div className="jesus-btn-title">{t('jesusJourneyTitle')}</div>
-            <div className="jesus-btn-subtitle">{t('jesusJourneySub')}</div>
+            <div className="jesus-btn-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L12 22M7 7L17 7"></path>
+              </svg>
+            </div>
+            <div className="jesus-btn-info">
+              <div className="jesus-btn-title">{t('jesusJourneyTitle')}</div>
+              <div className="jesus-btn-subtitle">{t('jesusJourneySub')}</div>
+            </div>
           </button>
         </section>
 
@@ -530,7 +649,10 @@ function App() {
             <button className="home-testament-card" onClick={() => setTestament('Old Testament')}>
               <div>
                 <h3 className="testament-card-name">{scriptureConfig.type === 'torah' ? 'Torah' : t('oldTestament')}</h3>
-                <p className="testament-card-range">{scriptureConfig.name} {flagEmoji}</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
+                   {flagCode && <img src={`https://flagcdn.com/w40/${flagCode}.png`} className="flag-icon" alt="" />}
+                   {scriptureConfig.name}
+                </div>
               </div>
               <div className="testament-card-stats">
                 <div className="testament-stat">
@@ -554,7 +676,10 @@ function App() {
               <button className="home-testament-card" onClick={() => setTestament('New Testament')}>
                 <div>
                   <h3 className="testament-card-name">{t('newTestament')}</h3>
-                  <p className="testament-card-range">{scriptureConfig.name} {flagEmoji}</p>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
+                    {flagCode && <img src={`https://flagcdn.com/w40/${flagCode}.png`} className="flag-icon" alt="" />}
+                    {scriptureConfig.name}
+                  </div>
                 </div>
                 <div className="testament-card-stats">
                   <div className="testament-stat">
@@ -613,35 +738,43 @@ function App() {
     const books = BIBLE[testament];
 
     return (
-      <div className="app-main">
-        <button className="back-button" onClick={() => setTestament(null)}>
-          {t('backToTestaments')}
-        </button>
-        <h1>{testament === 'Old Testament' ? t('oldTestament') : t('newTestament')}</h1>
-        {books.length === 0 ? (
-          <div className="empty-state">{t('emptyTestament')}</div>
-        ) : (
-          <div className="grid-cards">
-            {books.map((b) => {
+      <div className="books-page animate-in">
+        <div className="books-header">
+           <button className="glass-button back-btn-round" onClick={() => setTestament(null)}>
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+               <line x1="19" y1="12" x2="5" y2="12"></line>
+               <polyline points="12 19 5 12 12 5"></polyline>
+             </svg>
+           </button>
+           <h2 className="section-title">{testament === 'Old Testament' ? t('oldTestament') : t('newTestament')}</h2>
+        </div>
+
+        <div className="grid-cards">
+          {books.length === 0 ? (
+            <div className="empty-state">{t('emptyTestament')}</div>
+          ) : (
+            books.map((b) => {
               const { percentage, isComplete } = getBookProgressInfo(b);
               return (
-                <button
-                  key={b.name}
-                  className={`glass-button book-card ${isComplete ? 'completed' : ''}`}
-                  onClick={() => handleBookSelect(b)}
-                >
-                  <div className="book-card-header">
-                    <span>{b.name}</span>
-                    {isComplete && <CheckIcon className="check-icon" />}
+                <div key={b.name} className="book-card" onClick={() => handleBookSelect(b)}>
+                  <div className="book-card-info">
+                    <h3 className="book-name">{b.name}</h3>
+                    <div className="book-card-meta">
+                      <span>{b.chapters.length} {t('chapters')}</span>
+                      {percentage > 0 && <span className="book-progress-percent">{Math.round(percentage)}%</span>}
+                    </div>
                   </div>
-                  <div className="book-progress-wrapper" onClick={(e) => e.stopPropagation()}>
-                    <ProgressBar percentage={percentage} />
-                  </div>
-                </button>
+                  {isComplete && <CheckIcon className="check-icon" />}
+                  {percentage > 0 && (
+                    <div className="book-card-progress-mini">
+                      <div className="book-card-progress-inner" style={{ width: `${percentage}%` }} />
+                    </div>
+                  )}
+                </div>
               );
-            })}
-          </div>
-        )}
+            })
+          )}
+        </div>
       </div>
     );
   };

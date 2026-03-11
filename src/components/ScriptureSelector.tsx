@@ -12,44 +12,38 @@ export const ScriptureSelector: React.FC<ScriptureSelectorProps> = ({ currentScr
       <select
         value={currentScriptureId}
         onChange={(e) => onSelect(e.target.value)}
-        className="glass-button scripture-select"
+        className="scripture-select-input"
       >
-        <optgroup label="Bibles">
+        <optgroup label="Bibles" className="opt-group">
           {SCRIPTURES.filter(s => s.type === 'bible').map(s => (
-            <option key={s.id} value={s.id}>
+            <option key={s.id} value={s.id} className="opt-item">
               {s.name} · {s.language}
             </option>
           ))}
         </optgroup>
-        <optgroup label="Torah">
+        <optgroup label="Torah" className="opt-group">
           {SCRIPTURES.filter(s => s.type === 'torah').map(s => (
-            <option key={s.id} value={s.id}>
+            <option key={s.id} value={s.id} className="opt-item">
               {s.name} · {s.language}
             </option>
           ))}
         </optgroup>
       </select>
-      {/* Custom Dropdown Arrow */}
-      <svg
-        width="10"
-        height="6"
-        viewBox="0 0 10 6"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{
-          position: 'absolute',
-          right: '12px',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          pointerEvents: 'none',
-          stroke: 'currentColor',
-          strokeWidth: 2,
-          strokeLinecap: 'round',
-          strokeLinejoin: 'round'
-        }}
-      >
-        <path d="M1 1L5 5L9 1" />
-      </svg>
+      <div className="scripture-select-proxy">
+        <span className="scripture-selected-name">
+          {SCRIPTURES.find(s => s.id === currentScriptureId)?.name || 'Select'}
+        </span>
+        <svg
+          width="10"
+          height="6"
+          viewBox="0 0 10 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="select-arrow"
+        >
+          <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
     </div>
   );
 };

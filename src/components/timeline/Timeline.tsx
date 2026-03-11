@@ -47,40 +47,30 @@ export const Timeline = ({ onClose, onReadPassage }: { onClose: () => void, onRe
 
   return (
     <div className="timeline-page">
-      <div className="nav-bar-glass" style={{ position: 'sticky', top: 0, zIndex: 100 }}>
-        <div className="nav-left">
-          <button className="glass-button" onClick={onClose} style={{ margin: 0, padding: '0.4rem 1rem', display: 'flex', alignItems: 'center', gap: '0.6rem', borderRadius: '100px' }}>
-            <span style={{ fontSize: '1.1rem', opacity: 0.8 }}>←</span>
-            <span className="hide-mobile" style={{ fontWeight: 600, fontSize: '0.9rem' }}>{t('backToHome')}</span>
-          </button>
-          <h3 className="timeline-page-title">{t('timelinePageTitle')}</h3>
-        </div>
+      <div className="timeline-nav">
+        <button className="back-btn-round" onClick={onClose} style={{ width: '42px', height: '42px' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+        </button>
+        <h3 className="section-title" style={{ fontSize: '1.5rem' }}>{t('timelinePageTitle')}</h3>
       </div>
 
       <div className="timeline-container">
-        <div className="timeline-header-controls">
+        <div className="timeline-filters">
           {(['all', 'covenant', 'miracle', 'battle', 'prophecy', 'jesus', 'general'] as const).map(filter => {
             const color = filter === 'all' ? 'var(--accent-color)' : getCategoryColor(filter);
             return (
               <button
                 key={filter}
-                className={`glass-button timeline-filter-btn ${activeFilter === filter ? 'active' : ''}`}
+                className={`timeline-filter-btn ${activeFilter === filter ? 'active' : ''}`}
                 onClick={() => setActiveFilter(filter)}
                 style={{ 
-                  borderColor: activeFilter === filter ? color : `${color}30`,
-                  background: activeFilter === filter ? `${color}20` : 'transparent',
-                  color: activeFilter === filter ? color : 'var(--text-secondary)'
+                  borderColor: activeFilter === filter ? color : 'transparent'
                 }}
               >
-                <span style={{ 
-                  display: 'inline-block', 
-                  width: '8px', 
-                  height: '8px', 
-                  borderRadius: '50%', 
-                  backgroundColor: color,
-                  marginRight: '8px',
-                  opacity: activeFilter === filter ? 1 : 0.6
-                }} />
+                <span className="filter-dot" style={{ backgroundColor: color }} />
                 {getTranslatedCategory(filter)}
               </button>
             );
@@ -94,44 +84,37 @@ export const Timeline = ({ onClose, onReadPassage }: { onClose: () => void, onRe
              const showEraHeader = idx === 0 || filteredEvents[idx - 1].era !== evt.era;
              const translatedBook = t(evt.scriptureLink.bookName as any) || evt.scriptureLink.bookName;
              
-             // SUBTLE COLORS: Keep them consistent but muted
              const catColor = getCategoryColor(evt.category);
              const displayDate = formatDisplayDate(evt.displayDate);
 
              return (
                <div key={evt.id} className="timeline-event-wrapper">
                  {showEraHeader && (
-                   <motion.div 
-                     className="timeline-era-header"
-                     initial={{ opacity: 0, y: 10 }}
-                     whileInView={{ opacity: 1, y: 0 }}
-                     viewport={{ once: true, margin: "-50px" }}
-                     transition={{ duration: 0.5 }}
-                   >
+                   <div className="timeline-era-header">
                      <span className="era-badge">
-                       {(t(evt.era as any) || evt.era).toUpperCase()}
+                        {t(evt.era as any) || evt.era}
                      </span>
-                   </motion.div>
+                   </div>
                  )}
                  
                  <motion.div 
                    className={`timeline-item ${idx % 2 === 0 ? 'left' : 'right'}`}
-                   initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-                   whileInView={{ opacity: 1, x: 0 }}
+                   initial={{ opacity: 0, scale: 0.95 }}
+                   whileInView={{ opacity: 1, scale: 1 }}
                    viewport={{ once: true, margin: "-100px" }}
-                   transition={{ duration: 0.6, type: 'spring', damping: 20 }}
+                   transition={{ duration: 0.5, ease: "easeOut" }}
                  >
                    <div className="timeline-marker">
-                     <div className="timeline-dot" style={{ backgroundColor: catColor, boxShadow: `0 0 0 4px var(--bg-body), 0 0 10px ${catColor}40` }} />
+                     <div className="timeline-dot" style={{ backgroundColor: catColor, boxShadow: `0 0 20px ${catColor}40` }} />
                    </div>
-                   <div className="timeline-content glass-container">
-                     <div className="timeline-date" style={{ color: catColor, opacity: 0.9 }}>{displayDate}</div>
+                   <div className="timeline-content">
+                     <div className="timeline-date" style={{ color: catColor }}>{displayDate}</div>
                      <h3 className="timeline-title">{t(evt.id as any) || evt.title}</h3>
                      <p className="timeline-desc">{t(`${evt.id}Desc` as any) || evt.description}</p>
                      <button 
-                       className="glass-button primary-button timeline-read-btn"
+                       className="glass-button timeline-read-btn"
                        onClick={() => onReadPassage(evt.scriptureLink.bookName, evt.scriptureLink.chapter)}
-                       style={{ background: `${catColor}15`, border: `1px solid ${catColor}30`, color: 'var(--text-primary)' }}
+                       style={{ background: 'var(--accent-color)', color: 'var(--on-accent)', border: 'none' }}
                      >
                        {t('readAction')} {translatedBook} {evt.scriptureLink.chapter}
                      </button>
@@ -144,4 +127,5 @@ export const Timeline = ({ onClose, onReadPassage }: { onClose: () => void, onRe
       </div>
     </div>
   );
+
 };
