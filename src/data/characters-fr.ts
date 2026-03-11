@@ -527,6 +527,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "james_apostle_zebedee",
     name: "Jacques (fils de Zébédée)",
+    imageUrl: "/images/characters/james_apostle_zebedee.png",
     roles: ["Apôtre", "Pêcheur", "Martyr"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Galilée", "Jérusalem"],
@@ -543,6 +544,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "philip_apostle",
     name: "Philippe",
+    imageUrl: "/images/characters/philip_apostle.png",
     roles: ["Apôtre"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Bethsaïda"],
@@ -558,6 +560,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "bartholomew_apostle",
     name: "Barthélemy (Nathanaël)",
+    imageUrl: "/images/characters/bartholomew_apostle.png",
     roles: ["Apôtre"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Cana"],
@@ -572,6 +575,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "thomas_apostle",
     name: "Thomas",
+    imageUrl: "/images/characters/thomas_apostle.png",
     roles: ["Apôtre"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Galilée", "Jérusalem", "Tradition: Inde"],
@@ -587,6 +591,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "matthew_apostle",
     name: "Matthieu (Lévi)",
+    imageUrl: "/images/characters/matthew_apostle.png",
     roles: ["Apôtre", "Auteur", "Collecteur d'impôts"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Capharnaüm"],
@@ -602,6 +607,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "james_apostle_alphaeus",
     name: "Jacques (fils d'Alphée)",
+    imageUrl: "/images/characters/james_apostle_alphaeus.png",
     roles: ["Apôtre"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Galilée"],
@@ -616,6 +622,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "thaddaeus_apostle",
     name: "Thaddée (Jude)",
+    imageUrl: "/images/characters/thaddaeus_apostle.png",
     roles: ["Apôtre", "Auteur"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Galilée"],
@@ -630,6 +637,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "simon_zealot_apostle",
     name: "Simon le Zélote",
+    imageUrl: "/images/characters/simon_zealot_apostle.png",
     roles: ["Apôtre"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Galilée"],
@@ -644,6 +652,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "judas_iscariot",
     name: "Judas Iscariote",
+    imageUrl: "/images/characters/judas_iscariot.png",
     roles: ["Apôtre", "Traître"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Jérusalem"],
@@ -660,6 +669,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "matthias_apostle",
     name: "Matthias",
+    imageUrl: "/images/characters/matthias_apostle.png",
     roles: ["Apôtre"],
     era: "1er Siècle ap. J.-C.",
     keyLocations: ["Jérusalem"],
@@ -674,6 +684,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "adam",
     name: "Adam",
+    imageUrl: "/images/characters/adam.png",
     roles: ["Premier Homme", "Patriarche"],
     era: "Période Antédiluvienne",
     keyLocations: ["Jardin d'Éden"],
@@ -689,6 +700,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "eve",
     name: "Ève",
+    imageUrl: "/images/characters/eve.png",
     roles: ["Première Femme", "Matriarche"],
     era: "Période Antédiluvienne",
     keyLocations: ["Jardin d'Éden"],
@@ -704,6 +716,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "cain",
     name: "Caïn",
+    imageUrl: "/images/characters/cain.png",
     roles: ["Agriculteur", "Premier Meurtrier"],
     era: "Période Antédiluvienne",
     keyLocations: ["Est d'Éden", "Pays de Nod"],
@@ -718,6 +731,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "abel",
     name: "Abel",
+    imageUrl: "/images/characters/abel.png",
     roles: ["Berger"],
     era: "Période Antédiluvienne",
     keyLocations: ["Est d'Éden"],
@@ -733,6 +747,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "job",
     name: "Job",
+    imageUrl: "/images/characters/job.png",
     roles: ["Patriarche"],
     era: "Période Patriarcale",
     keyLocations: ["Pays d'Uts"],
@@ -749,6 +764,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
   {
     id: "elisha",
     name: "Élisée",
+    imageUrl: "/images/characters/elisha.png",
     roles: ["Prophète"],
     era: "9e Siècle av. J.-C.",
     keyLocations: ["Royaume du Nord (Israël)", "Samarie"],

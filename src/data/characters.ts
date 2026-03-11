@@ -539,6 +539,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "james_apostle_zebedee",
     name: "James (son of Zebedee)",
+    imageUrl: "/images/characters/james_apostle_zebedee.png",
     roles: ["Apostle", "Fisherman", "Martyr"],
     era: "1st Century AD",
     keyLocations: ["Galilee", "Jerusalem"],
@@ -555,6 +556,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "philip_apostle",
     name: "Philip",
+    imageUrl: "/images/characters/philip_apostle.png",
     roles: ["Apostle"],
     era: "1st Century AD",
     keyLocations: ["Bethsaida"],
@@ -570,6 +572,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "bartholomew_apostle",
     name: "Bartholomew (Nathanael)",
+    imageUrl: "/images/characters/bartholomew_apostle.png",
     roles: ["Apostle"],
     era: "1st Century AD",
     keyLocations: ["Cana"],
@@ -584,6 +587,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "thomas_apostle",
     name: "Thomas",
+    imageUrl: "/images/characters/thomas_apostle.png",
     roles: ["Apostle"],
     era: "1st Century AD",
     keyLocations: ["Galilee", "Jerusalem", "Tradition: India"],
@@ -599,6 +603,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "matthew_apostle",
     name: "Matthew (Levi)",
+    imageUrl: "/images/characters/matthew_apostle.png",
     roles: ["Apostle", "Author", "Tax Collector"],
     era: "1st Century AD",
     keyLocations: ["Capernaum"],
@@ -614,6 +619,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "james_apostle_alphaeus",
     name: "James (son of Alphaeus)",
+    imageUrl: "/images/characters/james_apostle_alphaeus.png",
     roles: ["Apostle"],
     era: "1st Century AD",
     keyLocations: ["Galilee"],
@@ -628,6 +634,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "thaddaeus_apostle",
     name: "Thaddaeus (Jude)",
+    imageUrl: "/images/characters/thaddaeus_apostle.png",
     roles: ["Apostle", "Author"],
     era: "1st Century AD",
     keyLocations: ["Galilee"],
@@ -642,6 +649,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "simon_zealot_apostle",
     name: "Simon the Zealot",
+    imageUrl: "/images/characters/simon_zealot_apostle.png",
     roles: ["Apostle"],
     era: "1st Century AD",
     keyLocations: ["Galilee"],
@@ -656,6 +664,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "judas_iscariot",
     name: "Judas Iscariot",
+    imageUrl: "/images/characters/judas_iscariot.png",
     roles: ["Apostle", "Traitor"],
     era: "1st Century AD",
     keyLocations: ["Jerusalem"],
@@ -672,6 +681,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "matthias_apostle",
     name: "Matthias",
+    imageUrl: "/images/characters/matthias_apostle.png",
     roles: ["Apostle"],
     era: "1st Century AD",
     keyLocations: ["Jerusalem"],
@@ -686,6 +696,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "adam",
     name: "Adam",
+    imageUrl: "/images/characters/adam.png",
     roles: ["First Man", "Patriarch"],
     era: "Antediluvian Period",
     keyLocations: ["Garden of Eden"],
@@ -701,6 +712,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "eve",
     name: "Eve",
+    imageUrl: "/images/characters/eve.png",
     roles: ["First Woman", "Matriarch"],
     era: "Antediluvian Period",
     keyLocations: ["Garden of Eden"],
@@ -716,6 +728,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "cain",
     name: "Cain",
+    imageUrl: "/images/characters/cain.png",
     roles: ["Farmer", "First Murderer"],
     era: "Antediluvian Period",
     keyLocations: ["East of Eden", "Land of Nod"],
@@ -730,6 +743,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "abel",
     name: "Abel",
+    imageUrl: "/images/characters/abel.png",
     roles: ["Shepherd"],
     era: "Antediluvian Period",
     keyLocations: ["East of Eden"],
@@ -745,6 +759,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "job",
     name: "Job",
+    imageUrl: "/images/characters/job.png",
     roles: ["Patriarch"],
     era: "Patriarchal Period",
     keyLocations: ["Land of Uz"],
@@ -761,6 +776,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "elisha",
     name: "Elisha",
+    imageUrl: "/images/characters/elisha.png",
     roles: ["Prophet"],
     era: "9th Century BC",
     keyLocations: ["Northern Kingdom (Israel)", "Samaria"],
