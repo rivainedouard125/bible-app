@@ -34,6 +34,23 @@ const TAG_COLORS: Record<string, string> = {
   'Matriarche': '#d946ef',
   'Enseignant': '#3b82f6',
   'Auteur': '#f43f5e',
+  'Autre': '#64748b',
+  'Messie': '#6366f1',
+  'Sauveur': '#6366f1',
+  'Fils de Dieu': '#6366f1',
+  'Législateur': '#f59e0b',
+  'Guerrier': '#f97316',
+  'Musicien': '#06b6d4',
+  'Missionnaire': '#ec4899',
+  'Théologue': '#3b82f6',
+  'Ancêtre de David': '#8b5cf6',
+  'Précurseur': '#ec4899',
+  'Reine de Perse': '#f59e0b',
+  'Gouverneur': '#10b981',
+  'Premier Homme': '#8b5cf6',
+  'Première Femme': '#d946ef',
+  'Médecin': '#06b6d4',
+  'Historien': '#f43f5e',
 };
 
 const getTagColor = (tag: string) => TAG_COLORS[tag] || '#64748b';

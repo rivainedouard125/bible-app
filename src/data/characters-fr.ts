@@ -17,7 +17,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Marc 16", event: "La Résurrection" }
     ],
     relatedCharacters: ["mary", "peter_apostle", "john_apostle", "paul_apostle", "john_baptist"],
-    tags: ["Leader", "Teacher"]
+    tags: ["Leader", "Enseignant"]
   },
   {
     id: "moses",
@@ -34,7 +34,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Exode 20", event: "Les Dix Commandements" }
     ],
     relatedCharacters: ["aaron", "miriam", "joshua", "pharaoh"],
-    tags: ["Prophet", "Leader"]
+    tags: ["Prophète", "Leader"]
   },
   {
     id: "abraham",
@@ -51,7 +51,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 22", event: "La Ligature d'Isaac" }
     ],
     relatedCharacters: ["sarah", "isaac", "ishmael", "lot"],
-    tags: ["Patriarch"]
+    tags: ["Patriarche"]
   },
   {
     id: "david",
@@ -68,7 +68,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Psaume 23", event: "L'Éternel est mon Berger" }
     ],
     relatedCharacters: ["saul", "jonathan", "bathsheba", "solomon", "samuel"],
-    tags: ["King"]
+    tags: ["Roi"]
   },
   {
     id: "paul_apostle",
@@ -85,7 +85,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Romains 8", event: "La Vie par l'Esprit" }
     ],
     relatedCharacters: ["jesus_christ", "peter_apostle", "barnabas", "timothy", "luke"],
-    tags: ["Apostle", "Leader", "Author"]
+    tags: ["Apôtre", "Leader", "Auteur"]
   },
   {
     id: "peter_apostle",
@@ -102,7 +102,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Actes 2", event: "Le Sermon de Pierre à la Pentecôte" }
     ],
     relatedCharacters: ["jesus_christ", "andrew", "james_apostle", "john_apostle", "paul_apostle"],
-    tags: ["Apostle", "Leader"]
+    tags: ["Apôtre", "Leader"]
   },
   {
     id: "mary",
@@ -119,7 +119,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 19", event: "Au pied de la Croix" }
     ],
     relatedCharacters: ["jesus_christ", "joseph_husband", "john_baptist", "elizabeth"],
-    tags: ["Matriarch", "Other"]
+    tags: ["Matriarche", "Autre"]
   },
   {
     id: "john_apostle",
@@ -136,7 +136,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Apocalypse 1", event: "La Vision de Jean à Patmos" }
     ],
     relatedCharacters: ["jesus_christ", "james_apostle", "peter_apostle", "mary"],
-    tags: ["Apostle", "Author"]
+    tags: ["Apôtre", "Auteur"]
   },
   {
     id: "elijah",
@@ -153,7 +153,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "2 Rois 2", event: "Élie enlevé au Ciel" }
     ],
     relatedCharacters: ["ahab", "jezebel", "elisha"],
-    tags: ["Prophet"]
+    tags: ["Prophète"]
   },
   {
     id: "solomon",
@@ -170,7 +170,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "1 Rois 10", event: "La Visite de la Reine de Saba" }
     ],
     relatedCharacters: ["david", "bathsheba", "queen_of_sheba", "rehoboam"],
-    tags: ["King"]
+    tags: ["Roi"]
   },
   {
     id: "noah",
@@ -187,7 +187,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 9", event: "L'Alliance de Dieu et l'Arc-en-ciel" }
     ],
     relatedCharacters: ["shem", "ham", "japheth"],
-    tags: ["Patriarch"]
+    tags: ["Patriarche"]
   },
   {
     id: "sarah",
@@ -204,7 +204,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 21", event: "La Naissance d'Isaac" }
     ],
     relatedCharacters: ["abraham", "isaac", "hagar", "ishmael"],
-    tags: ["Matriarch"]
+    tags: ["Matriarche"]
   },
   {
     id: "joseph_son_of_jacob",
@@ -221,7 +221,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 45", event: "Joseph révèle son identité" }
     ],
     relatedCharacters: ["jacob", "benjamin", "judah", "pharaoh"],
-    tags: ["Leader", "Patriarch"]
+    tags: ["Leader", "Patriarche"]
   },
   {
     id: "ruth",
@@ -238,7 +238,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Ruth 4", event: "Boaz épouse Ruth" }
     ],
     relatedCharacters: ["naomi", "boaz", "david"],
-    tags: ["Matriarch"]
+    tags: ["Matriarche"]
   },
   {
     id: "john_baptist",
@@ -255,7 +255,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Marc 6", event: "La Mort de Jean le Baptiste" }
     ],
     relatedCharacters: ["jesus_christ", "elizabeth", "mary", "herod_antipas"],
-    tags: ["Prophet"]
+    tags: ["Prophète"]
   },
   {
     id: "samuel",
@@ -272,7 +272,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "1 Samuel 16", event: "Samuel oint David" }
     ],
     relatedCharacters: ["hannah", "eli", "saul", "david"],
-    tags: ["Prophet", "Judge"]
+    tags: ["Prophète", "Juge"]
   },
   {
     id: "esther",
@@ -289,7 +289,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Esther 7", event: "Le complot de Haman révélé" }
     ],
     relatedCharacters: ["mordecai", "ahasuerus", "haman"],
-    tags: ["Leader", "Other"]
+    tags: ["Leader", "Autre"]
   },
   {
     id: "isaiah",
@@ -306,7 +306,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Ésaïe 53", event: "Le Serviteur Souffrant" }
     ],
     relatedCharacters: ["hezekiah", "ahaz"],
-    tags: ["Prophet", "Author"]
+    tags: ["Prophète", "Auteur"]
   },
   {
     id: "jacob",
@@ -323,7 +323,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 32", event: "La Lutte avec Dieu" }
     ],
     relatedCharacters: ["isaac", "esau", "rachel", "leah", "joseph_son_of_jacob"],
-    tags: ["Patriarch"]
+    tags: ["Patriarche"]
   },
   {
     id: "joshua",
@@ -340,7 +340,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Josué 6", event: "La Chute de Jéricho" }
     ],
     relatedCharacters: ["moses", "caleb", "rahab"],
-    tags: ["Leader", "Judge"]
+    tags: ["Leader", "Juge"]
   },
   {
     id: "stephen",
@@ -356,7 +356,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Actes 7", event: "Discours et Martyre" }
     ],
     relatedCharacters: ["paul_apostle", "peter_apostle"],
-    tags: ["Leader", "Other"]
+    tags: ["Leader", "Autre"]
   },
   {
     id: "gideon",
@@ -372,7 +372,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Juges 7", event: "Vaincre Madian avec 300 hommes" }
     ],
     relatedCharacters: [],
-    tags: ["Judge", "Leader"]
+    tags: ["Juge", "Leader"]
   },
   {
     id: "nehemiah",
@@ -389,7 +389,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Néhémie 6", event: "La Muraille Achevée" }
     ],
     relatedCharacters: ["ezra"],
-    tags: ["Leader", "Other"]
+    tags: ["Leader", "Autre"]
   },
   {
     id: "daniel",
@@ -406,7 +406,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Daniel 6", event: "Daniel dans la Fosse aux Lions" }
     ],
     relatedCharacters: ["shadrach", "meshach", "abednego"],
-    tags: ["Prophet", "Leader"]
+    tags: ["Prophète", "Leader"]
   },
   {
     id: "mary_magdalene",
@@ -423,7 +423,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 20", event: "Rencontre du Christ Ressuscité" }
     ],
     relatedCharacters: ["jesus_christ", "peter_apostle", "mary"],
-    tags: ["Disciple", "Other"]
+    tags: ["Disciple", "Autre"]
   },
   {
     id: "barnabas",
@@ -440,7 +440,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Actes 13", event: "Envoyé lors du premier voyage missionnaire" }
     ],
     relatedCharacters: ["paul_apostle", "john_mark"],
-    tags: ["Leader", "Teacher"]
+    tags: ["Leader", "Enseignant"]
   },
   {
     id: "samson",
@@ -457,7 +457,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Juges 16", event: "La Mort de Samson" }
     ],
     relatedCharacters: ["delilah"],
-    tags: ["Judge"]
+    tags: ["Juge"]
   },
   {
     id: "luke",
@@ -474,7 +474,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Colossiens 4", event: "Paul le qualifie de 'médecin bien-aimé'" }
     ],
     relatedCharacters: ["paul_apostle"],
-    tags: ["Author", "Other"]
+    tags: ["Auteur", "Autre"]
   },
   {
     id: "jonathan",
@@ -491,7 +491,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "2 Samuel 1", event: "La Complainte de David sur Saül et Jonathan" }
     ],
     relatedCharacters: ["david", "saul"],
-    tags: ["Leader", "Other"]
+    tags: ["Leader", "Autre"]
   },
   {
     id: "timothy",
@@ -508,7 +508,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "2 Timothée 1", event: "Paul loue Loïs et Eunice" }
     ],
     relatedCharacters: ["paul_apostle"],
-    tags: ["Leader", "Teacher"]
+    tags: ["Leader", "Enseignant"]
   },
   {
     id: "andrew_apostle",
@@ -524,7 +524,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 6", event: "Trouve le garçon avec les pains et les poissons" }
     ],
     relatedCharacters: ["jesus_christ", "peter_apostle", "john_baptist"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "james_apostle_zebedee",
@@ -541,7 +541,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Actes 12", event: "Martyrisé par Hérode" }
     ],
     relatedCharacters: ["jesus_christ", "john_apostle", "peter_apostle"],
-    tags: ["Apostle", "Leader"]
+    tags: ["Apôtre", "Leader"]
   },
   {
     id: "philip_apostle",
@@ -557,7 +557,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 14", event: "Philippe demande à voir le Père" }
     ],
     relatedCharacters: ["jesus_christ", "bartholomew_apostle"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "bartholomew_apostle",
@@ -572,7 +572,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 1", event: "Jésus rencontre Nathanaël" }
     ],
     relatedCharacters: ["jesus_christ", "philip_apostle"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "thomas_apostle",
@@ -588,7 +588,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 20", event: "Thomas doute, puis croit" }
     ],
     relatedCharacters: ["jesus_christ"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "matthew_apostle",
@@ -604,7 +604,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Luc 5", event: "Lévi organise un banquet pour Jésus" }
     ],
     relatedCharacters: ["jesus_christ"],
-    tags: ["Apostle", "Author"]
+    tags: ["Apôtre", "Auteur"]
   },
   {
     id: "james_apostle_alphaeus",
@@ -619,7 +619,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Matthieu 10", event: "Listé parmi les Douze" }
     ],
     relatedCharacters: ["jesus_christ"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "thaddaeus_apostle",
@@ -634,7 +634,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 14", event: "Judas (non Iscariote) pose une question à Jésus" }
     ],
     relatedCharacters: ["jesus_christ"],
-    tags: ["Apostle", "Author"]
+    tags: ["Apôtre", "Auteur"]
   },
   {
     id: "simon_zealot_apostle",
@@ -649,7 +649,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Luc 6", event: "Listé parmi les Douze" }
     ],
     relatedCharacters: ["jesus_christ", "matthew_apostle"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "judas_iscariot",
@@ -666,7 +666,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Matthieu 27", event: "Remords et mort de Judas" }
     ],
     relatedCharacters: ["jesus_christ", "matthias_apostle"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "matthias_apostle",
@@ -681,7 +681,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Actes 1", event: "Matthias choisi pour remplacer Judas" }
     ],
     relatedCharacters: ["peter_apostle", "judas_iscariot"],
-    tags: ["Apostle"]
+    tags: ["Apôtre"]
   },
   {
     id: "adam",
@@ -697,7 +697,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 3", event: "La Chute de l'Homme" }
     ],
     relatedCharacters: ["eve", "cain", "abel"],
-    tags: ["Patriarch", "Other"]
+    tags: ["Patriarche", "Autre"]
   },
   {
     id: "eve",
@@ -713,7 +713,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 3", event: "La Tromperie d'Ève" }
     ],
     relatedCharacters: ["adam", "cain", "abel"],
-    tags: ["Matriarch", "Other"]
+    tags: ["Matriarche", "Autre"]
   },
   {
     id: "cain",
@@ -728,7 +728,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Genèse 4", event: "Le Premier Meurtre" }
     ],
     relatedCharacters: ["adam", "eve", "abel"],
-    tags: ["Other"]
+    tags: ["Autre"]
   },
   {
     id: "abel",
@@ -744,7 +744,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Hébreux 11", event: "Loué pour sa Foi" }
     ],
     relatedCharacters: ["adam", "eve", "cain"],
-    tags: ["Other"]
+    tags: ["Autre"]
   },
   {
     id: "job",
@@ -761,7 +761,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Job 42", event: "Les biens de Job sont restaurés" }
     ],
     relatedCharacters: [],
-    tags: ["Patriarch", "Other"]
+    tags: ["Patriarche", "Autre"]
   },
   {
     id: "elisha",
@@ -778,7 +778,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "2 Rois 5", event: "La Guérison de la lèpre de Naaman" }
     ],
     relatedCharacters: ["elijah", "ahab"],
-    tags: ["Prophet"]
+    tags: ["Prophète"]
   },
   {
     id: "caleb",
@@ -811,7 +811,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Juges 5", event: "Le Cantique de Débora" }
     ],
     relatedCharacters: [],
-    tags: ["Prophet", "Judge", "Leader"]
+    tags: ["Prophète", "Juge", "Leader"]
   },
   {
     id: "saul",
@@ -828,7 +828,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "1 Samuel 18", event: "La jalousie de Saül envers David commence" }
     ],
     relatedCharacters: ["samuel", "david", "jonathan"],
-    tags: ["King"]
+    tags: ["Roi"]
   },
   {
     id: "hezekiah",
@@ -845,7 +845,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Ésaïe 38", event: "Maladie et guérison d'Ézéchias" }
     ],
     relatedCharacters: ["isaiah"],
-    tags: ["King"]
+    tags: ["Roi"]
   },
   {
     id: "josiah",
@@ -861,7 +861,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "2 Rois 23", event: "Les vastes réformes de Josias" }
     ],
     relatedCharacters: [],
-    tags: ["King"]
+    tags: ["Roi"]
   },
   {
     id: "miriam",
@@ -878,7 +878,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Nombres 12", event: "Miriam et Aaron s'opposent à Moïse" }
     ],
     relatedCharacters: ["moses", "aaron"],
-    tags: ["Prophet", "Leader"]
+    tags: ["Prophète", "Leader"]
   },
   {
     id: "martha",
@@ -894,7 +894,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 11", event: "La confession de foi de Marthe: 'Tu es le Messie'" }
     ],
     relatedCharacters: ["jesus_christ", "mary_of_bethany", "lazarus"],
-    tags: ["Disciple", "Other"]
+    tags: ["Disciple", "Autre"]
   },
   {
     id: "mary_of_bethany",
@@ -910,7 +910,7 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 12", event: "Oignant les pieds de Jésus avec du parfum" }
     ],
     relatedCharacters: ["jesus_christ", "martha", "lazarus"],
-    tags: ["Disciple", "Other"]
+    tags: ["Disciple", "Autre"]
   },
   {
     id: "lazarus",
@@ -926,6 +926,6 @@ export const CHARACTERS_FR: BiblicalCharacter[] = [
       { reference: "Jean 12", event: "Le complot pour tuer Lazare" }
     ],
     relatedCharacters: ["jesus_christ", "martha", "mary_of_bethany"],
-    tags: ["Disciple", "Other"]
+    tags: ["Disciple", "Autre"]
   }
 ];

@@ -8,7 +8,7 @@ export interface BiblicalCharacter {
   detailedBio: string;
   keyScriptures: { reference: string; event: string }[];
   relatedCharacters: string[]; // Links to other character IDs
-  tags: ('Apostle' | 'King' | 'Prophet' | 'Judge' | 'Patriarch' | 'Matriarch' | 'Leader' | 'Disciple' | 'Teacher' | 'Author' | 'Other')[];
+  tags: string[];
   imageUrl?: string;
 }
 
