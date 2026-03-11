@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback, useLayoutEffect } from 'react';
 import { useI18n } from '../hooks/i18nContext';
 
 import { LOC, IMAGES, getJourneyStory } from '../data/journeyData';
@@ -40,7 +40,7 @@ function HolyLandMap({ activeChapter, story }: { activeChapter: StoryChapter, st
             <g className="js-map-marker active" transform={`translate(${activeLoc.x},${activeLoc.y})`}>
               <circle r="3.5" fill="rgba(var(--jesus-accent-rgb), 0.25)" className="map-pulse-ring" />
               <circle r="1" fill="var(--jesus-accent)" stroke="var(--surface-color)" strokeWidth="0.3" />
-              <text y="-4" textAnchor="middle" fontSize="3.2" fontWeight="900" fill="#fff" className="js-map-text-glow">
+              <text y="-4" textAnchor="middle" fontSize="3.2" fontWeight="900" fill="#fff">
                 {(t as any)(activeLoc.name) || activeLoc.name}
               </text>
             </g>
@@ -88,6 +88,42 @@ function VerseQuote({ seg, onNav }: { seg: VerseSegment; onNav: (b: string, c: n
     timer.current = setTimeout(() => setOpen(false), 300);
   };
 
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [cardOffset, setCardOffset] = useState(0);
+
+  useLayoutEffect(() => {
+    if (open && cardRef.current && ref.current) {
+      const cardRect = cardRef.current.getBoundingClientRect();
+      const triggerRect = ref.current.getBoundingClientRect();
+      
+      // Use the .js-main container boundaries instead of just the window
+      const container = ref.current.closest('.js-main');
+      const bounds = container 
+        ? container.getBoundingClientRect() 
+        : { left: 0, right: window.innerWidth, width: window.innerWidth };
+
+      const margin = 24;
+
+      // The card is naturally centered on the trigger via translate: -50%
+      // Its center is triggerRect.left + (triggerRect.width / 2)
+      const triggerCenter = triggerRect.left + triggerRect.width / 2;
+      const cardHalfWidth = cardRect.width / 2;
+
+      let offset = 0;
+      const cardLeft = triggerCenter - cardHalfWidth;
+      const cardRight = triggerCenter + cardHalfWidth;
+
+      // Check against container bounds
+      if (cardLeft < bounds.left + margin) {
+        offset = (bounds.left + margin) - cardLeft;
+      } else if (cardRight > bounds.right - margin) {
+        offset = (bounds.right - margin) - cardRight;
+      }
+
+      setCardOffset(offset);
+    }
+  }, [open]);
+
   useEffect(() => {
     return () => { if (timer.current) clearTimeout(timer.current); };
   }, []);
@@ -103,7 +139,15 @@ function VerseQuote({ seg, onNav }: { seg: VerseSegment; onNav: (b: string, c: n
         {seg.label}
       </span>
       {open && (
-        <div className="js-verse-card js-map-text-glow">
+        <div 
+          ref={cardRef}
+          className="js-verse-card"
+          style={{ 
+            translate: `calc(-50% + ${cardOffset}px) 0`,
+            // @ts-ignore
+            '--beak-x': `calc(50% - ${cardOffset}px)`
+          }}
+        >
           <div className="js-verse-card-header">
             <span>{seg.reference}</span>
             <button className="js-verse-close" onClick={() => setOpen(false)}>×</button>
@@ -129,7 +173,7 @@ export default function JesusJourney({ onSelectPassage, onClose }: Props) {
   const STORY = getJourneyStory(lang);
 
   const [activeId, setActiveId] = useState(STORY[0]?.id);
-  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+  const [isMapExpanded, setIsMapExpanded] = useState(false);
   const chapRefs = useRef<Record<string, HTMLElement | null>>({});
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -178,42 +222,19 @@ export default function JesusJourney({ onSelectPassage, onClose }: Props) {
     <div className="js-layout">
       {/* Mobile Top Bar */}
       <div className="js-mobile-nav">
-        <button onClick={onClose} style={{ background: 'none', border: 'none', color: 'var(--jesus-accent)' }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <button onClick={onClose} style={{ background: 'none', border: 'none', color: 'var(--jesus-accent)', padding: '0.5rem' }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         </button>
-        <div className="js-mob-title">CH {activeChapter.number}: {activeChapter.title}</div>
-        <button className="js-mob-btn" onClick={() => setMobileNavOpen(true)}>NAV</button>
+        <div className="js-mob-center">
+          <div className="js-mob-chapter-num">CHAPTER {activeChapter.number}</div>
+          <div className="js-mob-title">{activeChapter.title}</div>
+        </div>
+        <div style={{ width: '40px' }} /> {/* Spacer to keep title centered */}
+        <div className="js-mobile-progress-bar">
+          <div className="js-mobile-progress-fill" style={{ width: `${progress}%` }} />
+        </div>
       </div>
 
-      {/* Mobile Sidebar Overlay */}
-      {isMobileNavOpen && (
-        <div className="js-mobile-overlay" onClick={() => setMobileNavOpen(false)}>
-          <div className="js-mobile-drawer" onClick={e => e.stopPropagation()}>
-            <div className="js-drawer-header">
-              <span>{t('journeyNav')}</span>
-              <button onClick={() => setMobileNavOpen(false)}>×</button>
-            </div>
-            <div className="js-drawer-map">
-              <HolyLandMap activeChapter={activeChapter} story={STORY} />
-            </div>
-            <div className="js-drawer-list">
-              {STORY.map((ch, idx) => (
-                <button 
-                  key={ch.id} 
-                  className={`js-drawer-item ${ch.id === activeId ? 'active' : ''}`}
-                  onClick={() => {
-                    chapRefs.current[ch.id]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    setMobileNavOpen(false);
-                  }}
-                >
-                  <span className="js-drawer-num">{idx + 1}</span>
-                  <span className="js-drawer-label">{ch.title}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
       <aside className="js-aside">
         <div className="js-aside-top">
           <button className="js-btn-close" onClick={onClose}>
@@ -348,6 +369,42 @@ export default function JesusJourney({ onSelectPassage, onClose }: Props) {
           </button>
         </footer>
       </main>
+
+      {/* Floating Map Bubble (Mobile Only) */}
+      <div className={`js-floating-map-mobile ${isMapExpanded ? 'expanded' : ''}`}>
+        {isMapExpanded && (
+          <div className="js-map-overlay-close" onClick={() => setIsMapExpanded(false)} />
+        )}
+        <div className="js-map-bubble-content" onClick={() => setIsMapExpanded(!isMapExpanded)}>
+          <div className="js-map-header-mini">
+             <HolyLandMap activeChapter={activeChapter} story={STORY} />
+          </div>
+          
+          {isMapExpanded && (
+            <div className="js-map-expanded-list">
+              <div className="js-map-list-title">{t('journeyNav')}</div>
+              {STORY.map((ch, idx) => (
+                <button 
+                  key={ch.id} 
+                  className={`js-drawer-item ${ch.id === activeId ? 'active' : ''}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    chapRefs.current[ch.id]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setIsMapExpanded(false);
+                  }}
+                >
+                  <span className="js-drawer-num">{idx + 1}</span>
+                  <span className="js-drawer-label">{ch.title}</span>
+                </button>
+              ))}
+            </div>
+          )}
+
+          {!isMapExpanded && (
+             <div className="js-map-hint">MAP</div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

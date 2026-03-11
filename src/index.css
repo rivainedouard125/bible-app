@@ -22,8 +22,13 @@
   --radius-md: 12px;
   --radius-lg: 20px;
   --on-accent: #ffffff;
-  --jesus-accent: #745b08;
-  --jesus-accent-rgb: 116, 91, 8;
+  --jesus-accent: #8b6e0a;
+  --jesus-accent-rgb: 139, 110, 10;
+  --js-card-bg: rgba(255, 255, 255, 0.7);
+  --js-glass: rgba(255, 255, 255, 0.85);
+  --js-overlay: rgba(0, 0, 0, 0.05);
+  --js-border: rgba(139, 110, 10, 0.1);
+  --js-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
 [data-theme='dark'] {
@@ -47,6 +52,11 @@
   --pattern-color: rgba(255, 255, 255, 0.05);
   --jesus-accent: #d4af37;
   --jesus-accent-rgb: 212, 175, 55;
+  --js-card-bg: rgba(15, 15, 15, 0.8);
+  --js-glass: rgba(10, 10, 10, 0.9);
+  --js-overlay: rgba(0, 0, 0, 0.4);
+  --js-border: rgba(212, 175, 55, 0.2);
+  --js-shadow: 0 10px 60px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -1127,6 +1137,18 @@ h2 {
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   overflow: hidden;
+  position: relative;
+}
+
+[data-theme='day'] .js-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  mix-blend-mode: multiply;
+  z-index: 1;
 }
 
 /* ── Dashboard Sidebar ── */
@@ -1142,6 +1164,167 @@ h2 {
 
 .js-aside-top {
   padding: 1.5rem 1.5rem 1rem;
+}
+
+/* Floating Map Bubble (Mobile Only) */
+.js-floating-map-mobile {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1500;
+  width: 180px;
+  height: 180px;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s ease;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.js-floating-map-mobile:not(.expanded):hover {
+  opacity: 1;
+}
+
+.js-floating-map-mobile.expanded {
+  width: 320px;
+  height: 80vh;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  .js-floating-map-mobile {
+    display: block;
+    pointer-events: auto;
+  }
+}
+
+.js-map-bubble-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.js-floating-map-mobile.expanded .js-map-bubble-content {
+  border-radius: 24px;
+  background: var(--surface-color);
+  border: 1px solid rgba(var(--jesus-accent-rgb), 0.3);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.js-map-header-mini {
+  width: 100%;
+  height: 100%;
+  transition: height 0.3s ease;
+}
+
+.js-floating-map-mobile.expanded .js-map-header-mini {
+  height: 280px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.js-map-expanded-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 0;
+  background: var(--surface-color);
+}
+
+.js-map-list-title {
+  padding: 0 1.5rem 1rem;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  color: var(--jesus-accent);
+  text-transform: uppercase;
+}
+
+.js-floating-map-mobile .js-map-frame {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 8px;
+  box-shadow: none;
+  border: none;
+}
+
+.js-floating-map-mobile.expanded .js-map-frame {
+  border-radius: 0;
+}
+
+.js-floating-map-mobile.expanded .js-map-container {
+  border-radius: 0;
+}
+
+/* Re-using drawer styles but inside the bubble */
+.js-map-expanded-list .js-drawer-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.js-map-expanded-list .js-drawer-item.active {
+  background: rgba(var(--jesus-accent-rgb), 0.1);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.js-floating-map-mobile .js-map-outer {
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.js-map-hint {
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--jesus-accent-rgb), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.js-floating-map-mobile:not(.expanded):hover .js-map-hint {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.js-map-overlay-close {
+  position: fixed;
+  inset: -100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+/* Hide footer and secondary info in mini view */
+.js-floating-map-mobile:not(.expanded) .js-map-footer,
+.js-floating-map-mobile:not(.expanded) .map-journey-tracker {
+  display: none;
 }
 
 .js-btn-close {
@@ -1198,7 +1381,7 @@ h2 {
   border: 1px solid rgba(var(--jesus-accent-rgb), 0.2);
   padding: 8px;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--js-shadow);
 }
 
 .js-map-container {
@@ -1208,7 +1391,7 @@ h2 {
   background-size: cover;
   background-position: center;
   position: relative;
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4);
   background-color: #000;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1239,16 +1422,20 @@ h2 {
 .js-map-outer::after {
   content: '';
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   left: 50%;
   width: 1px;
-  height: 30px;
-  background: linear-gradient(to bottom, rgba(var(--jesus-accent-rgb), 0.4), rgba(255, 255, 255, 0.05));
+  height: 20px;
+  background: linear-gradient(to bottom, var(--jesus-accent), transparent);
+  opacity: 0.3;
   z-index: 1;
 }
 
-.js-map-text-glow {
-  text-shadow: 0 0 4px rgba(0, 0, 0, 1), 0 0 8px rgba(0, 0, 0, 0.8);
+/* Marker Text */
+.js-map-marker text {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.05em;
+  fill: #fff;
 }
 
 .map-journey-tracker {
@@ -1375,7 +1562,7 @@ h2 {
   top: 0;
   bottom: 0;
   width: 1px;
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(to bottom, transparent, var(--js-border), transparent);
   z-index: 1;
 }
 
@@ -1391,14 +1578,14 @@ h2 {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid rgba(var(--jesus-accent-rgb), 0.2);
-  background: #080808;
+  border: 1px solid var(--js-border);
+  background: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
   font-weight: 800;
-  color: rgba(var(--jesus-accent-rgb), 0.5);
+  color: var(--text-tertiary);
   position: relative;
   z-index: 2;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1444,21 +1631,21 @@ h2 {
 /* Sidebar Progress Status */
 .js-sidebar-status {
   padding: 1.5rem 2rem;
-  background: rgba(0, 0, 0, 0.4);
-  border-top: 1px solid rgba(var(--jesus-accent-rgb), 0.1);
+  background: var(--js-overlay);
+  border-top: 1px solid var(--js-border);
 }
 
 .js-status-label {
   font-size: 0.6rem;
   font-weight: 800;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-tertiary);
   margin-bottom: 0.6rem;
 }
 
 .js-progress-track {
   height: 3px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--border-subtle);
   border-radius: 2px;
   margin-bottom: 0.5rem;
   overflow: hidden;
@@ -1487,7 +1674,7 @@ h2 {
 
 /* Hero Section */
 .js-hero {
-  height: 90vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1496,6 +1683,8 @@ h2 {
   padding: 0 4rem;
   border-bottom: 1px solid var(--border-subtle);
   background: var(--bg-color);
+  position: relative;
+  z-index: 2;
 }
 
 .js-hero-topline {
@@ -1507,12 +1696,13 @@ h2 {
 }
 
 .js-hero-title {
-  font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 100;
-  letter-spacing: -0.05em;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 200;
+  letter-spacing: -0.06em;
   color: var(--text-primary);
-  line-height: 0.9;
+  line-height: 0.85;
   margin-bottom: 2.5rem;
+  text-transform: lowercase;
 }
 
 .js-hero-desc {
@@ -1535,12 +1725,12 @@ h2 {
 
 /* Magazine Section Structure */
 .js-section {
-  padding: 6rem 4rem;
+  padding: 4.5rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0.1;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .js-section.visible {
@@ -1589,10 +1779,13 @@ h2 {
 }
 
 .js-prophecy-mini {
-  background: #0a0a0a;
-  border: 1px solid rgba(var(--jesus-accent-rgb), 0.15);
-  border-radius: 12px;
-  padding: 2rem;
+  background: var(--js-card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--js-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: var(--js-shadow);
 }
 
 .js-prophecy-tag {
@@ -1620,10 +1813,11 @@ h2 {
 /* Visual Side */
 .js-art-frame {
   position: relative;
-  background: #000;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  background: var(--surface-color);
+  padding: 0.75rem;
+  border-radius: 12px;
+  box-shadow: var(--js-shadow);
+  border: 1px solid var(--border-subtle);
 }
 
 .js-art-img {
@@ -1647,7 +1841,9 @@ h2 {
 
 .js-caption-modern {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Quote Break */
@@ -1662,12 +1858,13 @@ h2 {
 }
 
 .js-pullquote p {
-  font-size: 2.25rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-family: 'Playfair Display', serif;
   font-style: italic;
   color: var(--text-primary);
-  line-height: 1.3;
-  margin-bottom: 1.5rem;
+  line-height: 1.35;
+  margin-bottom: 2rem;
+  font-weight: 300;
 }
 
 .js-pullquote cite {
@@ -1708,10 +1905,10 @@ h2 {
 .js-extra-chip {
   font-size: 0.75rem;
   padding: 0.4rem 0.8rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--js-overlay);
+  border: 1px solid var(--js-border);
   border-radius: 30px;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
 }
 
 .js-deeper-link {
@@ -1735,9 +1932,9 @@ h2 {
 
 .js-section-divider {
   margin: 10rem 0 0;
-  height: 3px;
-  background: linear-gradient(to right, transparent, rgba(var(--jesus-accent-rgb), 0.45), transparent);
-  box-shadow: 0 0 15px rgba(var(--jesus-accent-rgb), 0.1);
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--jesus-accent), transparent);
+  opacity: 0.2;
 }
 
 /* Final Footer */
@@ -1788,9 +1985,9 @@ h2 {
   font-weight: 800;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.3);
+  background: var(--js-overlay);
+  border: 1px solid var(--js-border);
+  color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1801,19 +1998,18 @@ h2 {
   color: var(--jesus-accent);
 }
 
-/* Quick Facts Box */
 .js-facts-box {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  margin: 3rem 0;
+  padding: 1.75rem;
+  background: var(--js-overlay);
+  border: 1px solid var(--js-border);
+  border-radius: 16px;
 }
 
 .js-facts-title {
   font-size: 0.6rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 1rem;
@@ -1846,59 +2042,92 @@ h2 {
   color: var(--jesus-accent);
   font-weight: 700;
   cursor: pointer;
-  border-bottom: 2px dashed rgba(var(--jesus-accent-rgb), 0.4);
-  transition: all 0.2s;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.js-verse-tag::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--jesus-accent);
+  border-radius: 2px;
+  opacity: 0.25;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleX(0.8);
+  transform-origin: left;
+}
+
+.js-verse-tag:hover::after,
+.js-verse-tag.active::after {
+  opacity: 0.8;
+  transform: scaleX(1);
 }
 
 .js-verse-tag:hover,
 .js-verse-tag.active {
   color: var(--text-primary);
-  border-bottom-color: var(--jesus-accent);
-  background: rgba(var(--jesus-accent-rgb), 0.1);
+  background: rgba(var(--jesus-accent-rgb), 0.05);
   padding: 0 4px;
+  margin: 0 -4px;
   border-radius: 4px;
 }
 
 .js-verse-card {
-  background: rgba(18, 18, 18, 0.98);
-  backdrop-filter: blur(16px);
-  border: 1.5px solid rgba(var(--jesus-accent-rgb), 0.4);
+  background: var(--js-glass);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--js-border);
   position: absolute;
   z-index: 200;
-  padding: 1.25rem 1.5rem;
-  width: 360px;
-  border-radius: 12px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+  padding: 1.5rem 1.75rem;
+  width: 380px;
+  max-width: calc(100vw - 40px);
+  border-radius: 20px;
+  box-shadow: var(--js-shadow);
   top: 130%;
   left: 50%;
-  transform: translateX(-50%);
+  translate: -50% 0;
   margin-top: 5px;
-  animation: popoverIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: popoverIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --beak-x: 50%;
+  color: var(--text-primary);
+  text-shadow: none !important;
 }
 
 .js-verse-card::before {
   content: '';
   position: absolute;
   top: -6px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
+  left: var(--beak-x);
+  translate: -50% 0;
+  rotate: 45deg;
   width: 12px;
   height: 12px;
-  background: #121212;
-  border-top: 1.5px solid rgba(var(--jesus-accent-rgb), 0.4);
-  border-left: 1.5px solid rgba(var(--jesus-accent-rgb), 0.4);
+  background: var(--js-glass);
+  border-top: 1px solid var(--js-border);
+  border-left: 1px solid var(--js-border);
+  backdrop-filter: blur(20px);
+  z-index: -1;
 }
 
 .js-verse-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.75rem;
-  font-size: 0.65rem;
-  font-weight: 800;
+  margin-bottom: 1rem;
+  font-size: 0.6rem;
+  font-weight: 600;
   color: var(--jesus-accent);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.js-verse-card-header span {
+  text-shadow: none;
 }
 
 .js-verse-close {
@@ -1912,32 +2141,34 @@ h2 {
 }
 
 .js-verse-card-text {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-primary);
   font-style: italic;
-  margin-bottom: 1.25rem;
-  border-left: 2px solid rgba(var(--jesus-accent-rgb), 0.2);
-  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--jesus-accent);
+  padding-left: 1rem;
+  text-shadow: none;
 }
 
 .js-verse-card-btn {
   width: 100%;
-  background: rgba(var(--jesus-accent-rgb), 0.1);
-  border: 1px solid rgba(var(--jesus-accent-rgb), 0.3);
-  color: var(--jesus-accent);
-  padding: 0.6rem;
-  border-radius: 6px;
+  background: var(--surface-color);
+  border: 1px solid var(--js-border);
+  color: var(--text-primary);
+  padding: 0.75rem;
+  border-radius: 8px;
   font-size: 0.75rem;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .js-verse-card-btn:hover {
-  background: var(--jesus-accent);
-  color: #000;
+  background: var(--js-overlay);
+  border-color: var(--jesus-accent);
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
@@ -1975,8 +2206,6 @@ h2 {
 
   .js-verse-card {
     width: calc(100vw - 40px);
-    left: 50% !important;
-    transform: translateX(-50%) !important;
   }
 }
 
@@ -1987,14 +2216,16 @@ h2 {
   top: 0;
   left: 0;
   right: 0;
-  height: 60px;
-  background: rgba(8, 8, 8, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(var(--jesus-accent-rgb), 0.2);
+  height: 64px;
+  background: var(--js-glass);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--js-border);
   z-index: 1000;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 1024px) {
@@ -2007,21 +2238,58 @@ h2 {
   }
 }
 
+.js-mob-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.js-mob-chapter-num {
+  font-size: 0.55rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: var(--jesus-accent);
+  margin-bottom: 2px;
+}
+
 .js-mob-title {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 800;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.02em;
   color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.js-mobile-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(var(--jesus-accent-rgb), 0.1);
+}
+
+.js-mobile-progress-fill {
+  height: 100%;
+  background: var(--jesus-accent);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px var(--jesus-accent);
 }
 
 .js-mob-btn {
-  background: rgba(var(--jesus-accent-rgb), 0.1);
-  border: 1px solid rgba(var(--jesus-accent-rgb), 0.3);
-  color: var(--jesus-accent);
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 800;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Mobile Drawer & Overlay */
@@ -2075,7 +2343,7 @@ h2 {
 .js-drawer-header button {
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1.5rem;
 }
 
@@ -2126,7 +2394,7 @@ h2 {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0d0a07;
+  background: var(--bg-color);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   overflow: hidden;
@@ -2140,8 +2408,8 @@ h2 {
   justify-content: space-between;
   padding: 0 2rem;
   height: 52px;
-  background: rgba(13, 10, 7, 0.97);
-  border-bottom: 1px solid rgba(var(--jesus-accent-rgb), 0.12);
+  background: var(--js-glass);
+  border-bottom: 1px solid var(--js-border);
   z-index: 100;
 }
 
@@ -2521,12 +2789,14 @@ h2 {
 @keyframes popoverIn {
   from {
     opacity: 0;
-    transform: translateY(-4px) scale(0.98);
+    margin-top: 10px;
+    scale: 0.98;
   }
 
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    margin-top: 5px;
+    scale: 1;
   }
 }
 
