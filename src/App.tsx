@@ -152,6 +152,11 @@ function App() {
   const [isGlossaryOpen, setIsGlossaryOpen] = useState(false);
   const [isTimelineOpen, setIsTimelineOpen] = useState(false);
 
+  // Scroll to top when navigation changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [testament, book, chapter, isQuizOpen, isJesusJourneyOpen, isUserProfileOpen, isCommunityOpen, isGlossaryOpen, isTimelineOpen]);
+
   // Progress Tracking State
   const [readChapters, setReadChapters] = useState<Record<string, boolean>>(() => {
     const saved = localStorage.getItem('bible_progress');

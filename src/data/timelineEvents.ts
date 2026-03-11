@@ -14,6 +14,7 @@ export interface TimelineEvent {
     verse?: number;
   };
   imageUrl?: string;
+  imagePosition?: string; // CSS object-position value
 }
 
 export const TIMELINE_EVENTS: TimelineEvent[] = [
@@ -26,6 +27,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'creation',
     description: 'God creates the heavens, the earth, and all living things in six days.',
     scriptureLink: { bookName: 'Genesis', chapter: 1 },
+    imageUrl: '/images/timeline/creation.png',
+    imagePosition: 'center 40%',
   },
   {
     id: 'the-fall',
@@ -36,6 +39,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'general',
     description: 'Adam and Eve eat from the tree of the knowledge of good and evil.',
     scriptureLink: { bookName: 'Genesis', chapter: 3 },
+    imageUrl: '/images/timeline/the-fall.png',
+    imagePosition: 'center 30%', 
   },
   {
     id: 'abraham-covenant',
@@ -46,6 +51,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'covenant',
     description: 'God promises Abraham that he will be the father of a great nation.',
     scriptureLink: { bookName: 'Genesis', chapter: 12 },
+    imageUrl: '/images/timeline/abraham-covenant.jpg',
+    imagePosition: 'center 25%',
   },
   {
     id: 'joseph-egypt',
@@ -56,6 +63,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'general',
     description: 'Sold into slavery by his brothers, Joseph rises to become second-in-command of Egypt, eventually saving his family from famine.',
     scriptureLink: { bookName: 'Genesis', chapter: 37 },
+    imageUrl: '/images/timeline/joseph-egypt.jpg',
+    imagePosition: 'center 20%',
   },
   {
     id: 'exodus-red-sea',
@@ -66,6 +75,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'miracle',
     description: 'Moses parts the Red Sea, allowing the Israelites to escape from Egypt.',
     scriptureLink: { bookName: 'Exodus', chapter: 14 },
+    imageUrl: '/images/timeline/exodus-red-sea.jpg',
+    imagePosition: 'center 40%',
   },
   {
     id: 'ten-commandments',
@@ -76,6 +87,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'covenant',
     description: 'God gives Moses the law on Mount Sinai.',
     scriptureLink: { bookName: 'Exodus', chapter: 20 },
+    imageUrl: '/images/timeline/ten-commandments.jpg',
+    imagePosition: 'center 30%',
   },
   {
     id: 'burning-bush',
@@ -86,6 +99,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'miracle',
     description: 'God speaks to Moses from a burning bush that is not consumed, calling him to deliver Israel.',
     scriptureLink: { bookName: 'Exodus', chapter: 3 },
+    imageUrl: '/images/timeline/burning-bush.jpg',
+    imagePosition: 'center 40%',
   },
   {
     id: 'fall-of-jericho',
@@ -96,6 +111,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'battle',
     description: 'The walls of Jericho collapse after the Israelites march around them for seven days.',
     scriptureLink: { bookName: 'Joshua', chapter: 6 },
+    imageUrl: '/images/timeline/fall-of-jericho.jpg',
+    imagePosition: 'center 40%',
   },
   {
     id: 'deborah-judge',
@@ -106,6 +123,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'battle',
     description: 'Deborah, the only female judge, leads Israel to victory over the Canaanite army of Sisera.',
     scriptureLink: { bookName: 'Judges', chapter: 4 },
+    imageUrl: '/images/timeline/deborah-judge.jpg',
+    imagePosition: 'center 30%',
   },
   {
     id: 'david-goliath',
@@ -116,6 +135,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'battle',
     description: 'The young shepherd David defeats the Philistine giant Goliath with a single stone.',
     scriptureLink: { bookName: '1 Samuel', chapter: 17 },
+    imageUrl: '/images/timeline/david-goliath.png',
+    imagePosition: 'center 20%',
   },
   {
     id: 'samson-story',
@@ -126,6 +147,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'miracle',
     description: 'God grants Samson supernatural strength to deliver Israel from the Philistines.',
     scriptureLink: { bookName: 'Judges', chapter: 13 },
+    imageUrl: '/images/timeline/samson-strength.png',
+    imagePosition: 'center 30%',
   },
   {
     id: 'saul-anointed',
@@ -136,6 +159,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'general',
     description: 'Samuel anoints Saul as the first king of Israel after the people demaded a king.',
     scriptureLink: { bookName: '1 Samuel', chapter: 10 },
+    imageUrl: '/images/timeline/saul-anointed.png',
+    imagePosition: 'center 30%',
   },
 
   {
@@ -147,6 +172,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'miracle',
     description: 'The prophet Elijah is taken to heaven in a whirlwind and a chariot of fire.',
     scriptureLink: { bookName: '2 Kings', chapter: 2 },
+    imageUrl: '/images/timeline/elijah-chariot.png',
+    imagePosition: 'center 40%',
   },
   {
     id: 'israel-captured',
@@ -157,6 +184,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     category: 'battle',
     description: 'The Northern Kingdom of Israel is conquered by the Assyrian Empire.',
     scriptureLink: { bookName: '2 Kings', chapter: 17 },
+    imageUrl: '/images/timeline/israel-falls-assyria.png',
+    imagePosition: 'center 45%',
   },
   {
     id: 'babylonian-exile',

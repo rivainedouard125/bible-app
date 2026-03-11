@@ -108,7 +108,18 @@ export const Timeline = ({ onClose, onReadPassage }: { onClose: () => void, onRe
                      <div className="timeline-dot" style={{ backgroundColor: catColor, boxShadow: `0 0 20px ${catColor}40` }} />
                    </div>
                    <div className="timeline-content">
-                     <div className="timeline-date" style={{ color: catColor }}>{displayDate}</div>
+                      {evt.imageUrl && (
+                        <div className="timeline-event-image-container">
+                          <img 
+                            src={evt.imageUrl} 
+                            alt={evt.title} 
+                            className="timeline-event-image" 
+                            loading="lazy"
+                            style={{ objectPosition: evt.imagePosition }}
+                          />
+                        </div>
+                      )}
+                      <div className="timeline-date" style={{ color: catColor }}>{displayDate}</div>
                      <h3 className="timeline-title">{t(evt.id as any) || evt.title}</h3>
                      <p className="timeline-desc">{t(`${evt.id}Desc` as any) || evt.description}</p>
                      <button 
