@@ -558,22 +558,7 @@ function App() {
                 )}
               </button>
               {profile?.religion && (
-                <div style={{
-                  position: 'absolute',
-                  bottom: '0px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  background: 'rgba(99,102,241,0.88)',
-                  backdropFilter: 'blur(4px)',
-                  borderRadius: '20px',
-                  padding: '0px 5px',
-                  fontSize: '9px',
-                  fontWeight: 700,
-                  color: '#fff',
-                  pointerEvents: 'none',
-                  whiteSpace: 'nowrap',
-                  zIndex: 10,
-                }}>
+                <div className="religion-badge">
                   {religionSymbol[profile.religion] || '☮'}
                 </div>
               )}
