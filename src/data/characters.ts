@@ -491,6 +491,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "jonathan",
     name: "Jonathan",
+    imageUrl: "/images/characters/jonathan.png",
     roles: ["Prince", "Warrior"],
     era: "11th Century BC",
     keyLocations: ["Gibeah", "Mount Gilboa"],
@@ -507,6 +508,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "timothy",
     name: "Timothy",
+    imageUrl: "/images/characters/timothy.png",
     roles: ["Pastor", "Missionary"],
     era: "1st Century AD",
     keyLocations: ["Lystra", "Ephesus"],
@@ -793,6 +795,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "caleb",
     name: "Caleb",
+    imageUrl: "/images/characters/caleb.png",
     roles: ["Spy", "Leader", "Warrior"],
     era: "15th-14th Century BC",
     keyLocations: ["Kadesh Barnea", "Hebron"],
@@ -809,6 +812,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "deborah",
     name: "Deborah",
+    imageUrl: "/images/characters/deborah.png",
     roles: ["Prophetess", "Judge", "Military Leader"],
     era: "12th Century BC",
     keyLocations: ["Mount Tabor", "Ephraim"],
@@ -824,6 +828,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "saul",
     name: "King Saul",
+    imageUrl: "/images/characters/saul.png",
     roles: ["King", "Warrior"],
     era: "11th Century BC",
     keyLocations: ["Gibeah", "Gilgal", "Mount Gilboa"],
@@ -840,6 +845,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "hezekiah",
     name: "Hezekiah",
+    imageUrl: "/images/characters/hezekiah.png",
     roles: ["King"],
     era: "8th-7th Century BC",
     keyLocations: ["Jerusalem"],
@@ -856,6 +862,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "josiah",
     name: "Josiah",
+    imageUrl: "/images/characters/josiah.png",
     roles: ["King"],
     era: "7th Century BC",
     keyLocations: ["Jerusalem"],
@@ -871,6 +878,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "miriam",
     name: "Miriam",
+    imageUrl: "/images/characters/miriam.png",
     roles: ["Prophetess", "Leader"],
     era: "15th-13th Century BC",
     keyLocations: ["Egypt", "Wilderness", "Red Sea"],
@@ -887,6 +895,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "martha",
     name: "Martha",
+    imageUrl: "/images/characters/martha.png",
     roles: ["Disciple", "Hostess"],
     era: "1st Century AD",
     keyLocations: ["Bethany"],
@@ -902,6 +911,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "mary_of_bethany",
     name: "Mary of Bethany",
+    imageUrl: "/images/characters/mary_of_bethany.png",
     roles: ["Disciple"],
     era: "1st Century AD",
     keyLocations: ["Bethany"],
@@ -917,6 +927,7 @@ export const CHARACTERS: BiblicalCharacter[] = [
   {
     id: "lazarus",
     name: "Lazarus",
+    imageUrl: "/images/characters/lazarus.png",
     roles: ["Disciple", "Friend of Jesus"],
     era: "1st Century AD",
     keyLocations: ["Bethany"],

@@ -113,7 +113,7 @@ const HomeIcon = ({ className }: { className?: string }) => (
 
 function App() {
   const { lang, t } = useI18n();
-  
+
   // Track scripture selection independently of UI language
   const [scriptureId, setScriptureId] = useState<string>(() => {
     return localStorage.getItem('bible_scripture_id') || `bible-${lang}`;
@@ -135,7 +135,7 @@ function App() {
         "New Testament": []
       };
     }
-    
+
     return sourceData;
   }, [scriptureId]);
 
@@ -342,11 +342,10 @@ function App() {
   const renderNavBar = () => (
     <div className="nav-bar-glass">
 
-      {/* LEFT: Title + Home */}
+      {/* LEFT: Home + Scripture */}
       <div className="nav-left">
-        <button 
-          className={`glass-button ${(!isTimelineOpen && !isGlossaryOpen && !isQuizOpen && !isCommunityOpen && !isJesusJourneyOpen && !isUserProfileOpen) ? 'active' : ''}`}
-          style={{ width: '42px', height: '42px', borderRadius: '50%', padding: 0 }}
+        <button
+          className={`glass-button nav-home-btn ${(!isTimelineOpen && !isGlossaryOpen && !isQuizOpen && !isCommunityOpen && !isJesusJourneyOpen && !isUserProfileOpen) ? 'active' : ''}`}
           onClick={resetAll}
           title="Home"
         >
@@ -366,36 +365,14 @@ function App() {
         </div>
       </div>
 
-      {/* CENTER: Navigation Tabs */}
-      <div className="nav-links hide-mobile">
-        <button 
-          className={`nav-link ${(!isTimelineOpen && !isGlossaryOpen && !isQuizOpen && !isJesusJourneyOpen) ? 'active' : ''}`}
-          onClick={resetAll}
-        >
-          Bible
-        </button>
-        <button 
-          className={`nav-link ${isTimelineOpen ? 'active' : ''}`}
-          onClick={() => { resetAll(); setIsTimelineOpen(true); }}
-        >
-          Timeline
-        </button>
-        <button 
-          className={`nav-link ${isGlossaryOpen ? 'active' : ''}`}
-          onClick={() => { resetAll(); setIsGlossaryOpen(true); }}
-        >
-          Characters
-        </button>
-        <button 
-          className={`nav-link ${isQuizOpen ? 'active' : ''}`}
-          onClick={() => { resetAll(); setIsQuizOpen(true); }}
-        >
-          Quiz
-        </button>
-      </div>
-
       {/* CENTER: Search */}
       <div className={`nav-search ${isMobileSearchVisible ? 'mobile-visible' : ''}`}>
+        <div className="search-icon-wrapper">
+          <svg className="search-icon-nav" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
         <input
           type="text"
           placeholder={t('searchPlaceholder')}
@@ -407,11 +384,16 @@ function App() {
           }}
           onFocus={() => setIsSearchOpen(true)}
         />
-        <button 
+
+        <button
           className="mobile-search-close"
           onClick={() => setIsMobileSearchVisible(false)}
+          title="Close search"
         >
-          ✕
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px' }}>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
         {isSearchOpen && searchResults.length > 0 && (
           <div className="glass-container" style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', width: '380px', maxHeight: '380px', overflowY: 'auto', marginTop: '0.5rem', padding: '0.5rem', zIndex: 200, boxShadow: 'var(--shadow-glow)' }}>
@@ -504,7 +486,7 @@ function App() {
                 </div>
                 <LanguageSelector />
               </div>
-              
+
               <div className="typo-control-group">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span className="typo-label">{t('fontSize')}</span>
@@ -512,7 +494,7 @@ function App() {
                 </div>
                 <input type="range" className="typo-slider" min="0.8" max="2" step="0.05" value={fontSize} onChange={(e) => setFontSize(parseFloat(e.target.value))} />
               </div>
-              
+
               <div className="typo-control-group" style={{ paddingBottom: '0.75rem', borderBottom: '1px solid var(--border-subtle)', marginBottom: '0.75rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span className="typo-label">{t('lineHeight')}</span>
@@ -538,11 +520,11 @@ function App() {
 
         {/* Avatar / Profile */}
         {(() => {
-          const religionSymbol: Record<string, React.ReactNode> = { 
-            Christianity: <span style={{ fontSize: '10px' }}>✝</span>, 
-            Islam: <span style={{ fontSize: '10px' }}>☪</span>, 
-            Judaism: <span style={{ fontSize: '10px' }}>✡</span>, 
-            Other: <span style={{ fontSize: '10px' }}>☮</span> 
+          const religionSymbol: Record<string, React.ReactNode> = {
+            Christianity: <span style={{ fontSize: '10px' }}>✝</span>,
+            Islam: <span style={{ fontSize: '10px' }}>☪</span>,
+            Judaism: <span style={{ fontSize: '10px' }}>✡</span>,
+            Other: <span style={{ fontSize: '10px' }}>☮</span>
           };
           return (
             <div style={{ position: 'relative', display: 'inline-block' }}>
@@ -582,11 +564,11 @@ function App() {
     ) || 0;
 
     const scriptureConfig = SCRIPTURES.find(s => s.id === scriptureId) || SCRIPTURES[0];
-    const flagCode = 
-      scriptureConfig.language === 'English' ? 'gb' : 
-      scriptureConfig.language === 'Français' ? 'fr' : 
-      scriptureConfig.language === 'Español' ? 'es' : 
-      scriptureConfig.language === 'Deutsch' ? 'de' : null;
+    const flagCode =
+      scriptureConfig.language === 'English' ? 'gb' :
+        scriptureConfig.language === 'Français' ? 'fr' :
+          scriptureConfig.language === 'Español' ? 'es' :
+            scriptureConfig.language === 'Deutsch' ? 'de' : null;
 
     return (
       <div className="home-page">
@@ -635,8 +617,8 @@ function App() {
               <div>
                 <h3 className="testament-card-name">{scriptureConfig.type === 'torah' ? 'Torah' : t('oldTestament')}</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-                   {flagCode && <img src={`https://flagcdn.com/w40/${flagCode}.png`} className="flag-icon" alt="" />}
-                   {scriptureConfig.name}
+                  {flagCode && <img src={`https://flagcdn.com/w40/${flagCode}.png`} className="flag-icon" alt="" />}
+                  {scriptureConfig.name}
                 </div>
               </div>
               <div className="testament-card-stats">
@@ -725,13 +707,13 @@ function App() {
     return (
       <div className="books-page animate-in">
         <div className="books-header">
-           <button className="glass-button back-btn-round" onClick={() => setTestament(null)}>
-             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-               <line x1="19" y1="12" x2="5" y2="12"></line>
-               <polyline points="12 19 5 12 12 5"></polyline>
-             </svg>
-           </button>
-           <h2 className="section-title">{testament === 'Old Testament' ? t('oldTestament') : t('newTestament')}</h2>
+          <button className="glass-button back-btn-round" onClick={() => setTestament(null)}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <h2 className="section-title">{testament === 'Old Testament' ? t('oldTestament') : t('newTestament')}</h2>
         </div>
 
         <div className="grid-cards">
@@ -930,7 +912,7 @@ function App() {
     return (
       <>
         <Background />
-        <Timeline 
+        <Timeline
           onClose={() => setIsTimelineOpen(false)}
           onReadPassage={(bookName, chapterNum) => {
             const allBooks = [...BIBLE['Old Testament'], ...(BIBLE['New Testament'] || [])];
